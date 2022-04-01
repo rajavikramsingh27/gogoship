@@ -86,7 +86,6 @@ class CreateAccount extends StatelessWidget {
                         color: Colors.white,
                         border: Border.all(
                             color: Colors.black26
-
                         ),
 
                       ),
