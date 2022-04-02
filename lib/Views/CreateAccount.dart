@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:gogoship/Utils/Global.dart';
+import 'package:gogoship/VerificationCode.dart';
 
 class CreateAccount extends StatelessWidget {
   const CreateAccount({Key? key}) : super(key: key);
@@ -7,188 +10,412 @@ class CreateAccount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
-      body: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            height : 200,
-            width: MediaQuery.of(context).size.width ,
-            color: HexColor('#ffd700'),
-            alignment: Alignment.center,
-            child:  Image.asset(
-                'assets/images/Layer.png',
-              width: 53,
-              height: 80,
+      backgroundColor: HexColor('#ffd700'),
+      body: SingleChildScrollView(
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Container(
+            //   height : 200,
+            //   width: MediaQuery.of(context).size.width ,
+            //   color: HexColor('#ffd700'),
+            //   alignment: Alignment.center,
+            //   child:  Image.asset(
+            //     'assets/images/Layer.png',
+            //     width: 53,
+            //     height: 80,
+            //
+            //   ),
+            // ),
+            Container(
+              child: Column(
 
-            ),
-          ),
-         Stack(
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(left: 16,right: 16),
 
-           children: [
-             Container(
-               padding: EdgeInsets.only(left: 16,right: 16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      alignment: Alignment.center,
-                      padding: EdgeInsets.only(left: 20),
-                      child: Text(
-                        'Create your Account',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
+                    child:  Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: 10,
                         ),
-                      ),
-                      height: 45,
-                      // width: 280,
+                        Container(
+                          alignment: Alignment.center,
+                          padding: EdgeInsets.only(left: 20),
+                          child: Text(
+                            'Create your Account',
+                            style: TextStyle(
+                              fontFamily: 'SFPRODISPLAYHEAVYITALIC',
+                              color: Colors.black,
+                              fontSize: 20,
+                            ),
+                          ),
+                          height: 45,
+                          // width: 280,
 
-                    ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          'Email*',
+                          style: TextStyle(
+                              color: Colors.black54,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600
+                          ),
 
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      'Email*',
-                      style: TextStyle(
-                          color: Colors.black54,
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600
-                      ),
+                        ),
+                        SizedBox(height: 10,),
+                        Container(
+                          // alignment: Alignment.center,
+                          padding: EdgeInsets.only(left: 20),
+                          child: TextField(
+                            keyboardType: TextInputType.emailAddress,
 
-                    ),
-                    SizedBox(height: 10,),
-                    Container(
-                      alignment: Alignment.centerLeft,
-                      padding: EdgeInsets.only(left: 20),
-                      child: TextField(
-                        decoration: new InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'johnsondoe@nomail.com',
-                          hintStyle: TextStyle(
-                              fontSize: 16,
-                              // fontWeight: FontWeight.bold,
-                              fontFamily: 'Raleway',
-                              color: Colors.black26
+                            decoration: new InputDecoration(
+                              border: InputBorder.none,
+                              hintText: 'johnsondoe@nomail.com',
+                              hintStyle: TextStyle(
+                                  fontSize: 16,
+                                  // fontWeight: FontWeight.bold,
+                                  fontFamily: 'Raleway',
+                                  color: Colors.black26
+                              ),
+                            ),
+
+
+                          ),
+                          height: 50,
+                          // width: 280,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: Colors.white,
+
+                            border: Border.all(
+                              color: HexColor('#013088'),
+
+
+                            ),
+
                           ),
                         ),
-
-
-                      ),
-                      height: 66,
-                      // width: 280,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: Colors.white,
-                        border: Border.all(
-                            color: Colors.black26
+                        SizedBox(height: 10,),
+                        Text(
+                          'Phone Number',
+                          style: TextStyle(
+                              color: Colors.black54,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600
+                          ),
 
                         ),
+                        SizedBox(height: 10,),
+                        Container(
+                          // alignment: Alignment.center,
+                          padding: EdgeInsets.only(left: 20),
+                          child:TextFormField(
+                            // controller: _controller,
+                              keyboardType: TextInputType.number,
 
-                      ),
-                    ),
-                    SizedBox(height: 10,),
-                    Text(
-                      'Phone Number',
-                      style: TextStyle(
-                          color: Colors.black54,
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600
-                      ),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
 
-                    ),
-                    SizedBox(height: 10,),
-                    Container(
-                      alignment: Alignment.centerLeft,
-                      padding: EdgeInsets.only(left: 20),
-                      child: TextField(
-                        decoration: new InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'johnsondoe21',
-                          hintStyle: TextStyle(
-                              fontSize: 16,
-                              // fontWeight: FontWeight.bold,
-                              fontFamily: 'Raleway',
-                              color: Colors.black26
+                                // icon: Icon(Icons.phone_iphone)
+                              )
+                          ),
+                          height: 50,
+                          // width: 280,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: Colors.white,
+                            border: Border.all(
+                              color: HexColor('#013088'),
+
+                            ),
+
                           ),
                         ),
-
-
-                      ),
-                      height: 66,
-                      // width: 280,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: Colors.white,
-                        border: Border.all(
-                            color: Colors.black26
+                        SizedBox(height: 10,),
+                        Text(
+                          'Password',
+                          style: TextStyle(
+                              color: Colors.black54,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600
+                          ),
 
                         ),
+                        SizedBox(height: 10,),
+                        Container(
+                          alignment: Alignment.centerLeft,
+                          padding: EdgeInsets.only(left: 20),
+                          child: TextField(
+                            obscureText: true,
+                            decoration: new InputDecoration(
+                              border: InputBorder.none,
+                              hintText: '***************',
+                              hintStyle: TextStyle(
+                                  fontSize: 16,
+                                  // fontWeight: FontWeight.bold,
+                                  fontFamily: 'Raleway',
+                                  color: Colors.black26
+                              ),
+                            ),
 
-                      ),
-                    ),
-                    SizedBox(height: 10,),
-                    Text(
-                      'Password',
-                      style: TextStyle(
-                          color: Colors.black54,
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600
-                      ),
 
-                    ),
-                    SizedBox(height: 10,),
-                    Container(
-                      alignment: Alignment.centerLeft,
-                      padding: EdgeInsets.only(left: 20),
-                      child: TextField(
-                        decoration: new InputDecoration(
-                          border: InputBorder.none,
-                          hintText: '***************',
-                          hintStyle: TextStyle(
-                              fontSize: 16,
-                              // fontWeight: FontWeight.bold,
-                              fontFamily: 'Raleway',
-                              color: Colors.black26
+                          ),
+                          height: 50,
+                          // width: 280,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: Colors.white,
+                            border: Border.all(
+                              color: HexColor('#013088'),
+
+                            ),
+
                           ),
                         ),
+                        SizedBox(height: 20,),
+                        InkWell(
+                          child: Container(
+                            // alignment: Alignment.center,
+                            padding: EdgeInsets.only(left: 20),
+                            child:  Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(width: 40,),
+                                Text(
+                                  'GET STARTED',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600
+                                  ),
 
+                                ),
+                                Image.asset(
+                                  'assets/images/send.png',
+                                  height: 18,
+                                  width: 18,
 
-                      ),
-                      height: 66,
-                      // width: 280,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: Colors.white,
-                        border: Border.all(
-                            color: Colors.black26
+                                ),
+                                SizedBox(width: 40,),
+                              ],
+                            ),
+                            height: 54,
+                            // width: 280,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              color: HexColor('#115173'),
 
+                              boxShadow: [
+                                BoxShadow(
+                                  color: HexColor('#115173').withOpacity(0.25),
+                                  blurRadius: 4,
+                                  spreadRadius: 1,
+                                  offset: Offset(0, 0), // Shadow position
+                                ),
+                              ],
+
+                            ),
+                          ),
+                          onTap: (){
+                            Get.to(VerificationCode());
+                          },
                         ),
 
-                      ),
-                    ),
-                  ],
-                ),
-               height : MediaQuery.of(context).size.height-200,
-               width: MediaQuery.of(context).size.width ,
-               // color: Colors.white,
-               alignment: Alignment.center,
-               decoration: BoxDecoration(
-                   borderRadius: BorderRadius.only(
-                     topLeft: Radius.circular(50),
-                   ),
+                        SizedBox(height: 9,),
+                        Container(
+                          child:  Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              InkWell(
+                                child:  Container(
+                                  alignment: Alignment.center,
+                                  child:  Image.asset(
+                                    'assets/images/google.png',
+                                    height: 18,
+                                    width: 18,
 
-                   color: Colors.white
-               ),
-             )
-           ],
-         )
-        ],
-      ),
+                                  ),
+                                  height: 64,
+                                  width: 64,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(40),
+                                    color: Colors.white,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black12,
+                                        blurRadius: 2,
+                                        // offset: Offset(4, 8), // Shadow position
+                                      ),
+                                    ],
+                                    // border: Border.all(
+                                    //     // color: Colors.black26
+                                    //
+                                    // ),
+
+                                  ),
+                                ),
+                                onTap: (){},
+                              ),
+                              SizedBox(width: 20,),
+                              InkWell(
+                                child:  Container(
+                                  alignment: Alignment.center,
+                                  // padding: EdgeInsets.only(left: 20),
+                                  child: Icon(
+                                    Icons.facebook,
+                                    color: Colors.blue,
+                                  ),
+                                  height: 64,
+                                  width: 64,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(40),
+                                    color: Colors.white,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black12,
+                                        blurRadius: 2,
+                                        // offset: Offset(4, 8), // Shadow position
+                                      ),
+                                    ],
+                                    // border: Border.all(
+                                    //     // color: Colors.black26
+                                    //
+                                    // ),
+
+                                  ),
+                                ),
+                                onTap: (){},
+                              ),
+                              SizedBox(width: 20,),
+                              InkWell(
+                                child:  Container(
+                                  alignment: Alignment.center,
+                                  // padding: EdgeInsets.only(left: 20),
+                                  child: Icon(
+                                    Icons.apple,
+                                    color: Colors.black,
+                                  ),
+                                  height: 64,
+                                  width: 64,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(40),
+                                    color: Colors.white,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black12,
+                                        blurRadius: 2,
+                                        // offset: Offset(4, 8), // Shadow position
+                                      ),
+                                    ],
+                                    // border: Border.all(
+                                    //     // color: Colors.black26
+                                    //
+                                    // ),
+
+                                  ),
+                                ),
+                                onTap: (){},
+                              ),
+
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 10,),
+                  Container(
+                    child: Column(
+                      children: [
+                        SizedBox(height: 40,),
+                        Container(
+                          alignment: Alignment.center,
+                          child: Icon(
+                            Icons.arrow_drop_up,
+                            // color: Colors.blue,
+                          ),
+                          height: 23,
+                          width: 23,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 2,
+                                // offset: Offset(4, 8), // Shadow position
+                              ),
+                            ],
+                            // border: Border.all(
+                            //     // color: Colors.black26
+                            //
+                            // ),
+
+                          ),
+                        ),
+                        SizedBox(height: 15,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Existing User?',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600
+                              ),
+
+                            ),
+                            Text(
+                              ' Swipe Up',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold
+                              ),
+
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    height : 132,
+                    width: MediaQuery.of(context).size.width ,
+                    // color: Colors.white,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(65),
+                        topRight: Radius.circular(65),
+                      ),
+
+                      color: HexColor('#115173'),
+                    ),
+                  )
+                ],
+              ),
+              height : MediaQuery.of(context).size.height-200,
+              width: MediaQuery.of(context).size.width ,
+              // color: Colors.white,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(50),
+
+                  ),
+
+                  color: Colors.white
+              ),
+            )
+          ],
+        ),
+      )
     );
   }
 }

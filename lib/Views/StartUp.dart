@@ -1,7 +1,11 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gogoship/Utils/Global.dart';
 import 'package:gogoship/Views/CreateAccount.dart';
+import 'package:gogoship/Utils/ImageStyle.dart';
+import 'package:gogoship/Utils/ColorStyle.dart';
 
 
 class StartUp extends StatelessWidget {
@@ -9,20 +13,23 @@ class StartUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Timer(Duration(seconds: 3),
+            ()=>Navigator.pushReplacement(context,
+            MaterialPageRoute(builder:
+                (context) =>
+                    CreateAccount()
+            )
+        )
+    );
     return Scaffold(
-      backgroundColor:  HexColor('#ffd700'),
+      backgroundColor:  ColorStyle.fromHex("hexString"),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-        InkWell(
-          child:  Container(
+          Container(
             alignment: Alignment.center,
-            child:  Image.asset('assets/images/Layer.png'),
+            child:  Image.asset(ImageStyle.Layer),
           ),
-          onTap: (){
-            Get.to(CreateAccount());
-          },
-        )
         ],
       ),
     );
