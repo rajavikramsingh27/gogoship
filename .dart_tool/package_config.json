@@ -62,6 +62,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_swiper_plus",
+      "rootUri": "file:///Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_swiper_plus-2.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///Users/granzax/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -164,7 +170,7 @@
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-04-01T16:02:44.599648Z",
+  "generated": "2022-04-03T12:22:07.511332Z",
   "generator": "pub",
   "generatorVersion": "2.17.0-182.1.beta"
 }
