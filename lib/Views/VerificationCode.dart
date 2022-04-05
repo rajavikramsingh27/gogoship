@@ -24,6 +24,8 @@ class _VerificationCodeState extends State<VerificationCode> {
 
   double height = 0;
 
+
+
   @override
   void initState() {
     // TODO: implement initState

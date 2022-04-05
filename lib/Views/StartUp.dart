@@ -23,7 +23,7 @@ class StartUp extends StatelessWidget {
     );
 
     return Scaffold(
-      backgroundColor:  ColorStyle.fromHex("hexString"),
+      backgroundColor:  ColorStyle.bgColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
