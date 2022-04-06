@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
 class ColorStyle {
+
   static final Color bgColor =  fromHex("ffd700");
   static final Color primaryColor =  Colors.white;
   static final Color secondaryColor =  fromHex("#115173");
   static final Color titleColor =  fromHex("#011947");
   static final Color borderColorTF =  fromHex("#013088");
+  static final Color borderColorTF1 =  fromHex("#053f5e");
+  static final Color borderColorTF12 =  fromHex("#000000").withOpacity(16);
+
 
 
   static Color fromHex(String hexString) {

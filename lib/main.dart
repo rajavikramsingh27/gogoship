@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gogoship/Components/Buttons.dart';
-import 'package:gogoship/Components/TextFields.dart';
-import 'package:gogoship/Views/StartUp.dart';
+import 'package:gogoship/Views/HomeScreen.dart';
 import 'package:flutter/services.dart';
-
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,13 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Material(child:
-      Container
-        (
-        color: Colors.blueGrey,
-          padding:EdgeInsets.only(
-            left: 10,right: 10,top: 100,
-          ),child: ButtonDone()),),
+      home: HomeScreen()
     );
   }
 }
