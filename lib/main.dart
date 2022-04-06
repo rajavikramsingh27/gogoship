@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gogoship/Components/AppBarTab.dart';
 import 'package:gogoship/Views/HomeScreen.dart';
-import 'package:gogoship/Views/StartUp.dart';
-import 'package:gogoship/Components/DrawerStyle.dart';
 import 'package:flutter/services.dart';
-
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
