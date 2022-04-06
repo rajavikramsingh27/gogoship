@@ -42,13 +42,13 @@ class _VerificationCodeState extends State<VerificationCode> {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(VarificationCodeController());
+    final controller = Get.put(VerificationCodeController());
 
     return Scaffold(
         backgroundColor: ColorStyle.bgColor,
         appBar: this.appBar,
-        body:  GetBuilder<VarificationCodeController>(
-          init: VarificationCodeController(),
+        body:  GetBuilder<VerificationCodeController>(
+          init: VerificationCodeController(),
           initState: (state) {
             // controller.reset();
 
