@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
-import 'package:gogoship/Views/VerificationCode.dart';
 import 'package:gogoship/Styles/EffectStyle.dart';
 import 'package:gogoship/Styles/TextStyles.dart';
 import 'package:gogoship/Styles/Components.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
+import 'package:get/get.dart';
+import 'package:gogoship/Views/HomeScreen.dart';
 
 
 class LogIn extends StatelessWidget {
@@ -87,12 +87,9 @@ class LogIn extends StatelessWidget {
                               SizedBox(
                                 height: 14,
                               ),
-                              InkWell(
-                                child: ComponentsAuthSubmit.submitAuth('PROCEED'),
-                                onTap: () {
-                                  
-                                },
-                              ),
+                              ComponentsAuthSubmit.submitAuth('PROCEED', () {
+                                Get.to(HomeScreen());
+                              }),
                               SizedBox(
                                 height: 10,
                               ),

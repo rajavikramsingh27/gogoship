@@ -77,22 +77,21 @@ class ComponentsTFPassword extends StatelessWidget {
 }
 
 class ComponentsAuthSubmit {
-  static submitAuth(String text) {
-    return Container(
-      height: 60,
-      padding: EdgeInsets.only(
-        left: 40,
-        right: 40,
-      ),
-      decoration: BoxDecoration(
-          color: ColorStyle.secondaryColor,
-          borderRadius: BorderRadius.circular(SizeStyle.radius),
-          boxShadow: [
-            BoxShadow(
-                offset: Offset(0, 15),
-                blurRadius: 25,
-                color: ColorStyle.fromHex("00B3FE").withOpacity(0.15))
-          ]),
+  static submitAuth(String text,Function()? onTap ) {
+
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        primary: ColorStyle.secondaryColor,
+        fixedSize: Size(double.infinity, 60),
+        elevation: 2,
+        padding: EdgeInsets.only(
+          left: 40,
+          right: 40,
+        ),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(SizeStyle.radius),
+          ),
+    ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -106,6 +105,7 @@ class ComponentsAuthSubmit {
           )
         ],
       ),
+      onPressed: onTap
     );
   }
 }

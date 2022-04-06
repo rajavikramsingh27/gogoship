@@ -79,12 +79,15 @@ class CreateAccount extends StatelessWidget {
                 SizedBox(
                       height: 14,
                 ),
-                InkWell(
-                      child: ComponentsAuthSubmit.submitAuth('GET STARTED'),
-                      onTap: () {
-                        Get.to(VerificationCode());
-                      },
-                ),
+                ComponentsAuthSubmit.submitAuth('GET STARTED', () {
+                  Get.to(VerificationCode());
+                }),
+                // InkWell(
+                //       child: ComponentsAuthSubmit.submitAuth('GET STARTED'),
+                //       onTap: () {
+                //         Get.to(VerificationCode());
+                //       },
+                // ),
                 SizedBox(
                       height: 10,
                 ),
