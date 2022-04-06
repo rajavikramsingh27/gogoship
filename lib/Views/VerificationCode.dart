@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:gogoship/Controllers/VarificationCodeController.dart';
 import 'package:gogoship/Styles/SizeStyle.dart';
 import 'package:gogoship/Styles/EffectStyle.dart';
 import 'package:gogoship/Styles/TextStyles.dart';
@@ -41,193 +42,207 @@ class _VerificationCodeState extends State<VerificationCode> {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(VarificationCodeController());
+
     return Scaffold(
         backgroundColor: ColorStyle.bgColor,
         appBar: this.appBar,
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Image.asset(
-                'assets/images/Layer.png',
-                width: 53,
-                height: 80,
-              ),
-              SizedBox(height: 50,),
-              Container(
-                decoration: EffectStyle.curveAuth(Colors.white),
-                width: double.infinity,
-                height: height-80-50,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      padding: EffectStyle.paddingAuthWhite(),
-                      child: Column(
-                        children: [
-                          Text("Enter Verification Code",
-                              style: TextStyles.heading1),
-                          SizedBox(
-                            height: 40,
-                          ),
-                          Container(
-                            width: double.infinity,
-                            // decoration: ,
-                            child: Text("4-DIGIT CODE",
-                                style: TextStyles.button.apply(
-                                    color: ColorStyle.titleColor,
-                                    fontSizeDelta: 0.1)),
-                          ),
-                          SizedBox(
-                            height: 6,
-                          ),
-                          Container(
-                            height: SizeStyle.sizeAuthBox,
-                            width: MediaQuery.of(context).size.width,
-                            padding: EdgeInsets.only(
-                              left: 24,
-                              right: 24,
-                            ),
-                            decoration: BoxDecoration(
-                                color: ColorStyle.primaryColor,
-                                borderRadius: EffectStyle.borderRadiusAuth(SizeStyle.radius),
-                                border: EffectStyle.borderAllAuth(ColorStyle.borderColorTF)
-                            ),
-                            child: Row(
-                              children: [
-                                Expanded(
-                                    child: Stack(
-                                      children: [
-                                        Center(
-                                            child: Container(
-                                              height: 10,
-                                              decoration: BoxDecoration(
-                                                  color: ColorStyle.secondaryColor,
-                                                  borderRadius: EffectStyle.borderRadiusAuth(10)
-                                              ),
-                                            )),
-                                        TextField(
-                                          textAlign: TextAlign.center,
-                                          maxLength: 1,
-                                          // autofocus: true,
-                                          keyboardType: TextInputType.number,
-                                          style: TextStyle(
-                                              fontSize: 30
-                                          ),
-                                          decoration: InputDecoration(
-                                            counter: Offstage(),
-                                            border: InputBorder.none,
-                                          ),
-                                        ),
-                                      ],
-                                    )
+        body:  GetBuilder<VarificationCodeController>(
+          init: VarificationCodeController(),
+          initState: (state) {
+            // controller.reset();
+
+            // print(controller.listSelected.value);
+          },
+          builder: (authController) {
+            return Obx(() =>   SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/images/Layer.png',
+                    width: 53,
+                    height: 80,
+                  ),
+                  SizedBox(height: 50,),
+                  Container(
+                    decoration: EffectStyle.curveAuth(Colors.white),
+                    width: double.infinity,
+                    height: height-80-50,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          padding: EffectStyle.paddingAuthWhite(),
+                          child: Column(
+                            children: [
+                              Text("Enter Verification Code",
+                                  style: TextStyles.heading1),
+                              SizedBox(
+                                height: 40,
+                              ),
+                              Container(
+                                width: double.infinity,
+                                // decoration: ,
+                                child: Text("4-DIGIT CODE",
+                                    style: TextStyles.button.apply(
+                                        color: ColorStyle.titleColor,
+                                        fontSizeDelta: 0.1)),
+                              ),
+                              SizedBox(
+                                height: 6,
+                              ),
+                              Container(
+                                height: SizeStyle.sizeAuthBox,
+                                width: MediaQuery.of(context).size.width,
+                                padding: EdgeInsets.only(
+                                  left: 24,
+                                  right: 24,
                                 ),
-                                SizedBox(width: 20,),
-                                Expanded(
-                                    child: Stack(
-                                      children: [
-                                        Center(
-                                            child: Container(
-                                              height: 10,
-                                              decoration: BoxDecoration(
-                                                  color: ColorStyle.secondaryColor,
-                                                  borderRadius: EffectStyle.borderRadiusAuth(10)
-                                              ),
-                                            )),
-                                        TextField(
-                                          textAlign: TextAlign.center,
-                                          maxLength: 1,
-                                          // autofocus: true,
-                                          keyboardType: TextInputType.number,
-                                          style: TextStyle(
-                                              fontSize: 30
-                                          ),
-                                          decoration: InputDecoration(
-                                            counter: Offstage(),
-                                            border: InputBorder.none,
-                                          ),
-                                        ),
-                                      ],
-                                    )
+                                decoration: BoxDecoration(
+                                    color: ColorStyle.primaryColor,
+                                    borderRadius: EffectStyle.borderRadiusAuth(SizeStyle.radius),
+                                    border: EffectStyle.borderAllAuth(ColorStyle.borderColorTF)
                                 ),
-                                SizedBox(width: 20,),
-                                Expanded(
-                                    child: Stack(
-                                      children: [
-                                        Center(
-                                            child: Container(
-                                              height: 10,
-                                              decoration: BoxDecoration(
-                                                  color: ColorStyle.secondaryColor,
-                                                  borderRadius: EffectStyle.borderRadiusAuth(10)
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                        child: Stack(
+                                          children: [
+                                            Center(
+                                                child: Container(
+                                                  height: 10,
+                                                  decoration: BoxDecoration(
+                                                      color: ColorStyle.secondaryColor,
+                                                      borderRadius: EffectStyle.borderRadiusAuth(10)
+                                                  ),
+                                                )),
+                                            TextField(
+                                              textAlign: TextAlign.center,
+                                              maxLength: 1,
+                                              // autofocus: true,
+                                              keyboardType: TextInputType.number,
+                                              style: TextStyle(
+                                                  fontSize: 30
                                               ),
-                                            )),
-                                        TextField(
-                                          textAlign: TextAlign.center,
-                                          maxLength: 1,
-                                          // autofocus: true,
-                                          keyboardType: TextInputType.number,
-                                          style: TextStyle(
-                                              fontSize: 30
-                                          ),
-                                          decoration: InputDecoration(
-                                            counter: Offstage(),
-                                            border: InputBorder.none,
-                                          ),
-                                        ),
-                                      ],
-                                    )
-                                ),
-                                SizedBox(width: 20,),
-                                Expanded(
-                                    child: Stack(
-                                      children: [
-                                        Center(
-                                            child: Container(
-                                              height: 10,
-                                              decoration: BoxDecoration(
-                                                  color: ColorStyle.secondaryColor,
-                                                  borderRadius: EffectStyle.borderRadiusAuth(10)
+                                              decoration: InputDecoration(
+                                                counter: Offstage(),
+                                                border: InputBorder.none,
                                               ),
-                                            )),
-                                        TextField(
-                                          textAlign: TextAlign.center,
-                                          maxLength: 1,
-                                          // autofocus: true,
-                                          keyboardType: TextInputType.number,
-                                          style: TextStyle(
-                                              fontSize: 30
-                                          ),
-                                          decoration: InputDecoration(
-                                            counter: Offstage(),
-                                            border: InputBorder.none,
-                                          ),
-                                        ),
-                                      ],
-                                    )
+                                            ),
+                                          ],
+                                        )
+                                    ),
+                                    SizedBox(width: 20,),
+                                    Expanded(
+                                        child: Stack(
+                                          children: [
+                                            Center(
+                                                child: Container(
+                                                  height: 10,
+                                                  decoration: BoxDecoration(
+                                                      color: ColorStyle.secondaryColor,
+                                                      borderRadius: EffectStyle.borderRadiusAuth(10)
+                                                  ),
+                                                )),
+                                            TextField(
+                                              textAlign: TextAlign.center,
+                                              maxLength: 1,
+                                              // autofocus: true,
+                                              keyboardType: TextInputType.number,
+                                              style: TextStyle(
+                                                  fontSize: 30
+                                              ),
+                                              decoration: InputDecoration(
+                                                counter: Offstage(),
+                                                border: InputBorder.none,
+                                              ),
+                                            ),
+                                          ],
+                                        )
+                                    ),
+                                    SizedBox(width: 20,),
+                                    Expanded(
+                                        child: Stack(
+                                          children: [
+                                            Center(
+                                                child: Container(
+                                                  height: 10,
+                                                  decoration: BoxDecoration(
+                                                      color: ColorStyle.secondaryColor,
+                                                      borderRadius: EffectStyle.borderRadiusAuth(10)
+                                                  ),
+                                                )),
+                                            TextField(
+                                              textAlign: TextAlign.center,
+                                              maxLength: 1,
+                                              // autofocus: true,
+                                              keyboardType: TextInputType.number,
+                                              style: TextStyle(
+                                                  fontSize: 30
+                                              ),
+                                              decoration: InputDecoration(
+                                                counter: Offstage(),
+                                                border: InputBorder.none,
+                                              ),
+                                            ),
+                                          ],
+                                        )
+                                    ),
+                                    SizedBox(width: 20,),
+                                    Expanded(
+                                        child: Stack(
+                                          children: [
+                                            Center(
+                                                child: Container(
+                                                  height: 10,
+                                                  decoration: BoxDecoration(
+                                                      color: ColorStyle.secondaryColor,
+                                                      borderRadius: EffectStyle.borderRadiusAuth(10)
+                                                  ),
+                                                )),
+                                            TextField(
+                                              textAlign: TextAlign.center,
+                                              maxLength: 1,
+                                              // autofocus: true,
+                                              keyboardType: TextInputType.number,
+                                              style: TextStyle(
+                                                  fontSize: 30
+                                              ),
+                                              decoration: InputDecoration(
+                                                counter: Offstage(),
+                                                border: InputBorder.none,
+                                              ),
+                                            ),
+                                          ],
+                                        )
+                                    ),
+                                  ],
                                 ),
-                              ],
-                            ),
+                              ),
+                              SizedBox(
+                                height: 14,
+                              ),
+                              InkWell(
+                                child:
+                                ComponentsAuthSubmit.submitAuth('Aunthenticate'),
+                                onTap: () {
+                                  Get.to(VerificationCode());
+                                },
+                              ),
+                            ],
                           ),
-                          SizedBox(
-                            height: 14,
-                          ),
-                          InkWell(
-                            child:
-                            ComponentsAuthSubmit.submitAuth('Aunthenticate'),
-                            onTap: () {
-                              Get.to(VerificationCode());
-                            },
-                          ),
-                        ],
-                      ),
+                        ),
+                        ComponentsAuthBottom.authBottom('Resend the code', '', Container())
+                      ],
                     ),
-                    ComponentsAuthBottom.authBottom('Resend the code', '', Container())
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
-          ),
-        ),
+            ),);
+          },
+        )
+
+       ,
     );
   }
 }
