@@ -98,51 +98,68 @@ class _TextFieldsPasswordState extends State<TextFieldsPassword> {
   }
 }
 
+class TextFieldsWhiteRound extends StatelessWidget {
+  final TextEditingController? controller;
+  final bool? obscureText;
+  final String? hintText;
+  final TextInputType? keyboardType;
 
-// class TextFieldsPassword extends StatelessWidget {
-//   final TextEditingController? controller;
-//   final bool? obscureText;
-//   final String? hintText;
-//   final TextInputType? keyboardType;
-//
-//   TextFieldsPassword({
-//     Key? key,
-//     this.keyboardType = TextInputType.text,
-//     this.obscureText = false,
-//     this.controller,
-//     this.hintText,
-//   }) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return TextFormField(
-//       controller: controller,
-//       keyboardType: keyboardType,
-//       obscureText: obscureText!,
-//       decoration: InputDecoration(
-//           focusedBorder: OutlineInputBorder(
-//             borderSide: BorderSide(
-//                 color: ColorStyle.borderColorTF.withOpacity(0.4), width: 1.0),
-//             borderRadius: BorderRadius.circular(12),
-//           ),
-//           enabledBorder: OutlineInputBorder(
-//             borderSide: BorderSide(
-//                 color: ColorStyle.borderColorTF.withOpacity(0.4), width: 1.0),
-//             borderRadius: BorderRadius.circular(12),
-//           ),
-//           hintText: hintText,
-//           hintStyle: TextStyle(
-//               fontSize: 16, fontFamily: 'Raleway', color: Colors.black26),
-//           suffixIcon: InkWell(
-//             child: Icon(
-//               Icons.visibility_off_sharp,
-//               size: 24,
-//               color: ColorStyle.fromHex("#011947").withOpacity(0.6),
-//             ),
-//             onTap: () {
-//
-//             },
-//           )),
-//     );
-//   }
-// }
+  TextFieldsWhiteRound({
+    Key? key,
+    this.keyboardType = TextInputType.text,
+    this.obscureText = false,
+    this.controller,
+    this.hintText,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+        height: 45,
+        child: TextFormField(
+          controller: controller,
+          keyboardType: keyboardType,
+          obscureText: obscureText!,
+          decoration: InputDecoration(
+            fillColor: ColorStyle.primaryColor,
+            filled: true,
+            // focusColor: Colors.red,
+            focusedBorder: OutlineInputBorder(
+
+              borderSide: BorderSide(
+                width: 0.5,
+                // color: ColorStyle.borderColorTF.withOpacity(0.4), width: 1.0,
+                color: Colors.yellow,
+              ),
+
+              borderRadius: BorderRadius.circular(12),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                width: 0.5,                // color: ColorStyle.borderColorTF.withOpacity(0.4), width: 1.0,
+                color: Colors.yellow,
+              ),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            hintText: hintText,
+            hintStyle: TextStyle(
+                fontSize: 16,
+                fontFamily: 'Raleway',
+                color: Colors.black26),
+          ),
+        ),
+        decoration: BoxDecoration(
+          // color: Colors.white,
+          // border: Border.all(
+          //   color: Colors.yellow,
+          //   width: 0.5,
+          // ),
+          // borderRadius: BorderRadius.circular(12),
+        )
+    )
+      ],
+    );
+  }
+}
