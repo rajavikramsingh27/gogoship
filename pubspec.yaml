@@ -79,10 +79,13 @@ flutter:
   # example:
 
 
-#  fonts:
-#    - family: SFPRODISPLAY
-#      fonts:
-#        - asset:  assets/fonts/SFPRODISPLAYBOLD.ttf
+  fonts:
+    - family: GEDinarOne
+      fonts:
+        - asset: assets/fonts/GEDinarOneLight.otf
+        - asset: assets/fonts/GEDinarOneLightItalic.otf
+        - asset: assets/fonts/GEDinarOneMedium.otf
+        - asset: assets/fonts/GEDinarOneMediumItalic.otf
 #        - asset:  assets/fonts/SFPRODISPLAYHEAVYITALIC.ttf
 #        - asset:  assets/fonts/SFPRODISPLAYMEDIUM.ttf
 #        - asset:  assets/fonts/SFPRODISPLAYREGULAR.ttf
