@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gogoship/Views/HomeScreen.dart';
 import 'package:flutter/services.dart';
-import 'package:gogoship/Views/MyAccountPage.dart';
 import 'package:gogoship/Views/MyOrders.dart';
-import 'package:gogoship/Views/OderDetails.dart';
-import 'package:gogoship/Views/StartUp.dart';
-
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

@@ -207,13 +207,8 @@ class MyOrders extends StatelessWidget {
                       ),
                       decoration: EffectStyle.shadowOrders()
                   );
-
                 }),
           ),
-
-
-
-
         ],
       ),
     );
