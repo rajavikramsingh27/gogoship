@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gogoship/Components/TextFields.dart';
 import 'package:gogoship/Views/HomeScreen.dart';
 import 'package:flutter/services.dart';
+import 'package:gogoship/Views/MyProfile.dart';
+import 'package:gogoship/Views/NewOrder.dart';
 import 'package:gogoship/Views/StartUp.dart';
 
 
@@ -24,7 +27,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StartUp()
+      home: Material(
+        child: Container(
+          // color: Colors.blueGrey,
+          // padding: EdgeInsets.only(left: 10,right: 10,top: 100),
+          child: MyProfile(),
+        )
+      )
     );
   }
 }

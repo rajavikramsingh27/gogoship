@@ -146,18 +146,10 @@ class TextFieldsWhiteRound extends StatelessWidget {
             hintText: hintText,
             hintStyle: TextStyle(
                 fontSize: 16,
-                fontFamily: 'Raleway',
+                fontFamily: 'GEDinarOne',
                 color: Colors.black26),
           ),
         ),
-        decoration: BoxDecoration(
-          // color: Colors.white,
-          // border: Border.all(
-          //   color: Colors.yellow,
-          //   width: 0.5,
-          // ),
-          // borderRadius: BorderRadius.circular(12),
-        )
     )
       ],
     );

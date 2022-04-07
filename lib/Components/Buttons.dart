@@ -1,19 +1,32 @@
 import 'package:flutter/material.dart';
-
+import 'package:gogoship/Styles/ColorStyle.dart';
+import 'package:gogoship/Styles/SizeStyle.dart';
 
 
 class ButtonDone extends StatelessWidget {
-  const ButtonDone({Key? key}) : super(key: key);
+
+  final Function()? onTap;
+
+  const ButtonDone({Key? key, this.onTap,})
+      : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-         alignment: Alignment.center,
-        height: 44,
-        width: MediaQuery.of(context).size.width,
-            margin: EdgeInsets.only(left: 20,right: 20),
+    return ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          primary: ColorStyle.bgColor,
+          fixedSize: Size(MediaQuery.of(context).size.width, 50),
+          elevation: 2,
+          padding: EdgeInsets.only(
+            left: 20,
+            right: 20,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(SizeStyle.radius),
+          ),
+        ),
+
         child: Text(
           'Done',
           style: TextStyle(
@@ -21,44 +34,9 @@ class ButtonDone extends StatelessWidget {
             fontSize: 20,
           ),
         ),
-        decoration: BoxDecoration(
-          color: Colors.yellow,
-          // border: Border.all(
-          //   color: Colors.yellow,
-          //   width: 0.5,
-          // ),
-          borderRadius: BorderRadius.circular(10),
-        )
-    ),
-      ],
+        onPressed: onTap,
     );
   }
 }
 
 
-class CustomElevatedButton extends StatelessWidget {
-  final Function()? onTap;
-  final String? text;
-
-  const CustomElevatedButton({Key? key, this.onTap, this.text,})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return FractionallySizedBox(
-      child: ElevatedButton(
-        onPressed: () {
-
-        },
-        // onPressed: onTap,
-        style: ElevatedButton.styleFrom(
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20))),
-        child: Text(
-          text!,
-          textAlign: TextAlign.center,
-        ),
-      ),
-    );
-  }
-}
