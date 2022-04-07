@@ -34,4 +34,14 @@ class EffectStyle {
     );
   }
 
+  static shadowOrders() {
+    return BoxDecoration(
+        color: ColorStyle.secondaryColor,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+            width: 1.5,
+            color: ColorStyle.bgColor
+        )
+    );
+  }
 }

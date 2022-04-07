@@ -117,6 +117,7 @@ class TextFieldsWhiteRound extends StatelessWidget {
     return Column(
       children: [
         Container(
+          alignment: Alignment.centerLeft,
         height: 45,
         child: TextFormField(
           controller: controller,
@@ -143,7 +144,7 @@ class TextFieldsWhiteRound extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(12),
             ),
-            hintText: hintText,
+            hintText: 'Search for a store',
             hintStyle: TextStyle(
                 fontSize: 16,
                 fontFamily: 'Raleway',

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gogoship/Components/TextFields.dart';
 import 'package:gogoship/Controllers/DrawerStyleController.dart';
 import 'package:gogoship/Controllers/HomeScreenController.dart';
+import 'package:gogoship/Controllers/TabbarTabController.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
 import 'package:gogoship/Components/AppBarTab.dart';
 import 'package:gogoship/Styles/ImageStyle.dart';
@@ -24,176 +26,171 @@ class HomeScreen extends StatelessWidget {
           // print(controller.listSelected.value);
         },
         builder: (authController) {
-          return Obx(() =>   Column(
-            children: [
-              SizedBox(height: 20,),
-              Container(
-                alignment: Alignment.center,
-                child:  Text(
+          return Obx(() =>   SingleChildScrollView(
+            padding: EdgeInsets.only(top: 25),
+            child: Column(
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  child:  Text(
 
-                  'Quick Search',
-                  style: TextStyle(
-                      color: ColorStyle.bgColor,
-                      fontSize: 22
+                    'Quick Search',
+                    style: TextStyle(
+                        color: ColorStyle.bgColor,
+                        fontSize: 22
+
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10,),
+                Row(
+                  children: [
+                    SizedBox(width: 12,),
+
+                    Expanded(
+
+                      child: TextFieldsWhiteRound(),
+
+                    ),
+                    SizedBox(width: 4,),
+                    InkWell(
+                      child: Image.asset(
+                        ImageStyle.filter,
+                        width: 60,
+                        height: 60,
+                      ),
+                      onTap: () {
+                        filter();
+                      },
+                    ),
+                  ],
+                ),
+                SizedBox(height: 15,),
+                Container(
+                  margin: EdgeInsets.only(left: 16,right:16 ),
+                  padding: EdgeInsets.only(left: 16,right:16 ),
+                  width: 367,
+                  height: 283,
+                  child:   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 10,),
+                      Container(
+
+                        child: Text(
+
+                          'Turkey ',
+                          style: TextStyle(
+                              color: ColorStyle.bgColor,
+                              fontSize: 18
+
+                          ),
+                        ),
+                        padding: EdgeInsets.only(left: 10),
+                      ),
+                      SizedBox(height: 14,),
+                      Expanded(child:    GridView.builder(
+                        // itemCount: 4,
+                          itemCount: controller.images.length,
+                          gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              crossAxisSpacing: 10,
+                              mainAxisSpacing: 10,
+                              mainAxisExtent: 62
+                          ),
+                          itemBuilder: (BuildContext context, int index){
+                            return   Container(
+                              // color: ColorStyle.bgColor,
+                              // height: 20,
+                              // width: 159,
+                              child: Image.asset(controller.images[index],),
+                              decoration: BoxDecoration(
+                                  color: ColorStyle.primaryColor,
+                                  borderRadius: BorderRadius.circular(10),
+
+                                  boxShadow: [BoxShadow(
+                                    color: Colors.black54,
+                                    blurRadius: 2.0,
+                                  ),]
+                              ),
+                            );
+                          }
+
+                      ),)
+                    ],
+                  ),
+
+
+                  decoration: BoxDecoration(
+                    color: ColorStyle.secondaryColor,
+                    borderRadius: BorderRadius.circular(10),
 
                   ),
                 ),
-              ),
-              SizedBox(height: 10,),
-              Row(
-                children: [
-                  SizedBox(width: 12,),
-                  Container(
-                    width: 300,
-                    height: 48,
+                SizedBox(height: 15,),
+                Container(
+                  margin: EdgeInsets.only(left: 16,right:16 ),
+                  padding: EdgeInsets.only(left: 16,right:16 ),
+                  width: 367,
+                  height: 220,
+                  child:  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 10,),
+                      Container(
 
-                    decoration: BoxDecoration(
-                        color: ColorStyle.primaryColor,
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
-                          width: 1,
-                          color: ColorStyle.bgColor,
-                        )
-                    ),
-                  ),
-                  SizedBox(width: 4,),
-                  InkWell(
-                    child: Image.asset(
-                      ImageStyle.filter,
-                      width: 60,
-                      height: 60,
-                    ),
-                    onTap: () {
-                      filter();
-                    },
-                  ),
-                ],
-              ),
-              SizedBox(height: 15,),
-              Container(
-                margin: EdgeInsets.only(left: 16,right:16 ),
-                padding: EdgeInsets.only(left: 16,right:16 ),
-                width: 367,
-                height: 283,
-                child:   Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(height: 10,),
-                    Container(
+                        child: Text(
 
-                      child: Text(
+                          'USA ',
+                          style: TextStyle(
+                              color: ColorStyle.bgColor,
+                              fontSize: 18
 
-                        'Turkey ',
-                        style: TextStyle(
-                            color: ColorStyle.bgColor,
-                            fontSize: 18
-
+                          ),
                         ),
+                        padding: EdgeInsets.only(left: 10),
                       ),
-                      padding: EdgeInsets.only(left: 10),
-                    ),
-                    SizedBox(height: 14,),
-                    Expanded(child:    GridView.builder(
-                      // itemCount: 4,
-                        itemCount: controller.images.length,
-                        gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
+                      SizedBox(height: 14,),
+                      Expanded(child:  GridView.builder(
+                        // itemCount: 4,
+                          itemCount: controller.images1.length,
+                          gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
                             crossAxisSpacing: 10,
                             mainAxisSpacing: 10,
-                            mainAxisExtent: 62
-                        ),
-                        itemBuilder: (BuildContext context, int index){
-                          return   Container(
-                            // color: ColorStyle.bgColor,
-                            // height: 20,
-                            // width: 159,
-                            child: Image.asset(controller.images[index],),
-                            decoration: BoxDecoration(
-                                color: ColorStyle.primaryColor,
-                                borderRadius: BorderRadius.circular(10),
+                            mainAxisExtent: 62,
 
-                                boxShadow: [BoxShadow(
-                                  color: Colors.black54,
-                                  blurRadius: 2.0,
-                                ),]
-                            ),
-                          );
-                        }
+                          ),
+                          itemBuilder: (BuildContext context, int index){
+                            return   Container(
+                              // color: ColorStyle.bgColor,
+                              // height: 20,
+                              // width: 159,
+                              child: Image.asset(controller.images[index],),
+                              decoration: BoxDecoration(
+                                  color: ColorStyle.primaryColor,
+                                  borderRadius: BorderRadius.circular(10),
 
-                    ),)
-                  ],
-                ),
+                                  boxShadow: [BoxShadow(
+                                    color: Colors.black54,
+                                    blurRadius: 2.0,
+                                  ),]
+                              ),
+                            );
+                          }
 
-
-                decoration: BoxDecoration(
+                      ),)
+                    ],
+                  ),
+                  decoration: BoxDecoration(
                     color: ColorStyle.secondaryColor,
                     borderRadius: BorderRadius.circular(10),
 
+                  ),
                 ),
-              ),
-              SizedBox(height: 15,),
-              Container(
-                margin: EdgeInsets.only(left: 16,right:16 ),
-                padding: EdgeInsets.only(left: 16,right:16 ),
-                width: 367,
-                height: 220,
-                child:  Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(height: 10,),
-                    Container(
-
-                      child: Text(
-
-                        'USA ',
-                        style: TextStyle(
-                            color: ColorStyle.bgColor,
-                            fontSize: 18
-
-                        ),
-                      ),
-                      padding: EdgeInsets.only(left: 10),
-                    ),
-                    SizedBox(height: 14,),
-                   Expanded(child:  GridView.builder(
-                     // itemCount: 4,
-                       itemCount: controller.images1.length,
-                       gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
-                         crossAxisCount: 2,
-                         crossAxisSpacing: 10,
-                         mainAxisSpacing: 10,
-                         mainAxisExtent: 62,
-
-                       ),
-                       itemBuilder: (BuildContext context, int index){
-                         return   Container(
-                           // color: ColorStyle.bgColor,
-                           // height: 20,
-                           // width: 159,
-                           child: Image.asset(controller.images[index],),
-                           decoration: BoxDecoration(
-                               color: ColorStyle.primaryColor,
-                               borderRadius: BorderRadius.circular(10),
-
-                               boxShadow: [BoxShadow(
-                                 color: Colors.black54,
-                                 blurRadius: 2.0,
-                               ),]
-                           ),
-                         );
-                       }
-
-                   ),)
-                  ],
-                ),
-                decoration: BoxDecoration(
-                    color: ColorStyle.secondaryColor,
-                    borderRadius: BorderRadius.circular(10),
-
-                ),
-              ),
-            ],
-          ),);
+              ],
+            ),
+          ));
         },
       )
 
@@ -201,7 +198,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-filter() {
+filter () {
   final controller = Get.put(HomeScreenController());
 
   return Get.dialog(

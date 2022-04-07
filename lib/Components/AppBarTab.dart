@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
-
+import 'package:gogoship/Styles/ImageStyle.dart';
+import 'package:gogoship/Components/TextFields.dart';
 class AppBarStyle {
   static PreferredSize get appBar => PreferredSize(
     preferredSize: Size.fromHeight(45.0), // here the desired height
@@ -9,14 +10,17 @@ class AppBarStyle {
       backgroundColor: Colors.white,
       centerTitle: true,
       title: Image.asset(
-        'assets/images/GOGO1.png',
-        // width: 53,
-        // height: 80,
+        ImageStyle.Layer1,
+        width: 70,
+        height: 70,
       ),
-      leading: Icon(
-        Icons.menu,
-        color: ColorStyle.secondaryColor,
-        size: 30,
+      leading: InkWell(
+        child: Icon(
+          Icons.menu,
+          color: ColorStyle.secondaryColor,
+          size: 30,
+        ),
+        onTap: (){},
       ),
       actions: [
         Row(
