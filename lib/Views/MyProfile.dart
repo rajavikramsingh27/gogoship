@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:gogoship/Controllers/MyProfileController.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
 import 'package:gogoship/Components/AppBarTab.dart';
 import 'package:gogoship/Components/TextFields.dart';
@@ -13,6 +15,10 @@ class MyProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final controller = Get.put(MyProfileController());
+
+
     return Scaffold(
         backgroundColor: ColorStyle.secondaryColor,
         resizeToAvoidBottomInset: true,
@@ -109,6 +115,28 @@ class MyProfile extends StatelessWidget {
                 ),),
               SizedBox(height: 10),
               TextFieldsWhiteRound(),
+
+              // Container(
+              //   alignment: Alignment.center,
+              //   child: InkWell(
+              //     child: ClipRRect(
+              //       borderRadius: BorderRadius.circular(16),
+              //       child: Container(
+              //         alignment: Alignment.center,
+              //         height: 180,
+              //         width: 180,
+              //         decoration: BoxDecoration(
+              //             color: Colors.black12,
+              //             borderRadius:
+              //             BorderRadius.circular(16)),
+              //         child: controller.postPicture.value,
+              //       ),
+              //     ),
+              //     onTap: () async {
+              //       controller.showPopupMenu(context);
+              //     },
+              //   ),
+              // ),
             ],
           ),
         )

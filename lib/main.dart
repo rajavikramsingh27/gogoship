@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
+import 'package:gogoship/Views/MyAccountPage.dart';
 import 'package:gogoship/Views/MyOrders.dart';
+import 'package:gogoship/Views/MyOrders2.dart';
+import 'package:gogoship/Views/MyProfile.dart';
+import 'package:gogoship/Views/NewOrder.dart';
+import 'package:gogoship/Views/OderDetails.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: MyOrders()
+      home: NewOrder()
     );
   }
 }
