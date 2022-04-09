@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
-import 'package:gogoship/Views/MyOrders.dart';
+import 'package:gogoship/Views/SplashScreen.dart';
+import 'package:gogoship/Views/FontTesting.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,7 +24,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: MyOrders()
+      home: SplashScreen()
+        // home: Material(child: FontTesting())
     );
   }
 }
+

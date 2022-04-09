@@ -53,13 +53,14 @@ class LogIn extends StatelessWidget {
                           padding: EffectStyle.paddingAuthWhite(),
                           child: Column(
                             children: [
-                              Text("Log In to your Account.", style: TextStyles.heading1),
+                              Text("Log In to your Account.", style: TextStyles.heading1,),
                               SizedBox(
                                 height: 40,
                               ),
                               ComponentsTF(
                                 title: 'EMAIL OR PHONE NUMBER',
                                 hintText: 'johnsondoe@nomail.com',
+
                               ),
                               SizedBox(
                                 height: 12,
@@ -78,7 +79,9 @@ class LogIn extends StatelessWidget {
                                     fixedSize: Size.fromWidth(MediaQuery.of(context).size.width)
                                 ),
                                 child: Text('Recover Password?',
-                                  style: TextStyles.Title.apply(fontWeightDelta: 1),
+                                  style: TextStyles.Title.apply(fontWeightDelta: 1,
+                                    fontFamily: 'GEDinarOne',
+                                  ),
                                 ),
                                 onPressed: () {
 
@@ -88,11 +91,12 @@ class LogIn extends StatelessWidget {
                                 height: 14,
                               ),
                               ComponentsAuthSubmit.submitAuth('PROCEED', () {
-                                Get.to(HomeScreen());
+                                Get.offAll(HomeScreen());
                               }),
                               SizedBox(
                                 height: 10,
                               ),
+
                               ComponentsSocialSignIn(),
                             ],
                           ),

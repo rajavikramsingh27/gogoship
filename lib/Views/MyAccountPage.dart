@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gogoship/Components/AppBarTab.dart';
+import 'package:gogoship/Components/AppBarStyle.dart';
+import 'package:gogoship/Components/DrawerStyle.dart';
 import 'package:gogoship/Controllers/HomeScreenController.dart';
 import 'package:gogoship/Controllers/MyAccountPageController.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
@@ -12,11 +13,18 @@ class MyAccountPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(MyAccountPageController());
+    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
     return Scaffold(
 
         backgroundColor: ColorStyle.borderColorTF1,
-        appBar: AppBarStyle.appBar,
+    key: _scaffoldKey,
+    drawer: DrawerStyle(),
+    appBar: AppBarStyle(
+    onTap: () {
+    _scaffoldKey.currentState?.openDrawer();
+    },
+    ),
         body: GetBuilder<MyAccountPageController>(
           init: MyAccountPageController(),
           initState: (state) {
@@ -26,6 +34,7 @@ class MyAccountPage extends StatelessWidget {
           },
           builder: (authController) {
             return Obx(() =>   GridView.builder(
+              padding: EdgeInsets.only(top: 20),
               shrinkWrap: true,
                 itemCount: controller.listIcons.length,
                 gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
@@ -49,7 +58,8 @@ class MyAccountPage extends StatelessWidget {
                           controller.listOrder[index],
                           style: TextStyle(
                               color: Colors.black,
-                              fontSize: 18
+                              fontSize: 18,
+                            fontFamily: 'GEDinarOne',
 
                           ),
                         ),

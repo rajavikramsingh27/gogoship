@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gogoship/Components/DrawerStyle.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
-import 'package:gogoship/Components/AppBarTab.dart';
+import 'package:gogoship/Components/AppBarStyle.dart';
 import 'package:gogoship/Components/TextFields.dart';
 import 'package:gogoship/Styles/TextStyles.dart';
 import 'package:gogoship/Styles/EffectStyle.dart';
@@ -13,10 +14,20 @@ class MyProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
     return Scaffold(
         backgroundColor: ColorStyle.secondaryColor,
         resizeToAvoidBottomInset: true,
-        appBar: AppBarStyle.appBar,
+
+
+    key: _scaffoldKey,
+    drawer: DrawerStyle(),
+    appBar: AppBarStyle(
+    onTap: () {
+    _scaffoldKey.currentState?.openDrawer();
+    },
+    ),
         body:SingleChildScrollView(
           padding: EffectStyle.paddingMyProfile(),
           child:  Column(
@@ -28,12 +39,13 @@ class MyProfile extends StatelessWidget {
                   children: [
                     Icon(
                       Icons.person,
-                      size: 45,
+                      size: 40,
                     ),
                     Text(
                       'My Profile',
                       style: TextStyles.button1.apply(
                         color: Colors.black,
+                        fontFamily: 'GEDinarOne',
                       ),),
                   ],
                 ),
@@ -58,6 +70,7 @@ class MyProfile extends StatelessWidget {
                 'Name',
                 style: TextStyles.button.apply(
                   color: Colors.white,
+                  fontFamily: 'GEDinarOne',
                 ),),
               SizedBox(height: 10),
               TextFieldsWhiteRound(),
@@ -66,6 +79,7 @@ class MyProfile extends StatelessWidget {
                 'Address',
                 style: TextStyles.button.apply(
                   color: Colors.white,
+                  fontFamily: 'GEDinarOne',
                 ),),
               SizedBox(height: 10),
               TextFieldsWhiteRound(),
@@ -74,6 +88,7 @@ class MyProfile extends StatelessWidget {
                 'Province',
                 style: TextStyles.button.apply(
                   color: Colors.white,
+                  fontFamily: 'GEDinarOne',
                 ),),
               SizedBox(height: 10),
               TextFieldsWhiteRound(),
@@ -82,6 +97,7 @@ class MyProfile extends StatelessWidget {
                 'Phone',
                 style: TextStyles.button.apply(
                   color: Colors.white,
+                  fontFamily: 'GEDinarOne',
                 ),),
               SizedBox(height: 10),
               TextFieldsWhiteRound(),
@@ -90,6 +106,7 @@ class MyProfile extends StatelessWidget {
                 'Email',
                 style: TextStyles.button.apply(
                   color: Colors.white,
+                  fontFamily: 'GEDinarOne',
                 ),),
               SizedBox(height: 10),
               TextFieldsWhiteRound(),
@@ -98,6 +115,7 @@ class MyProfile extends StatelessWidget {
                 'Password',
                 style: TextStyles.button.apply(
                   color: Colors.white,
+                  // fontFamily: 'GEDinarOne',
                 ),),
               SizedBox(height: 10),
               TextFieldsWhiteRound(),
@@ -106,6 +124,7 @@ class MyProfile extends StatelessWidget {
                 'Gender',
                 style: TextStyles.button.apply(
                   color: Colors.white,
+                  fontFamily: 'GEDinarOne',
                 ),),
               SizedBox(height: 10),
               TextFieldsWhiteRound(),

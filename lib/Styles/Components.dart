@@ -36,7 +36,9 @@ class ComponentsTF extends StatelessWidget {
         TextFields(
           keyboardType: TextInputType.emailAddress,
           hintText: hintText,
+
           obscureText: obscureText,
+
         ),
       ],
     );
@@ -70,6 +72,7 @@ class ComponentsTFPassword extends StatelessWidget {
         TextFieldsPassword(
           keyboardType: TextInputType.text,
           hintText: hintText,
+
         ),
       ],
     );
@@ -217,7 +220,8 @@ class ComponentsAuthBottom {
               children: [
                 TextSpan(text: txtNormal,
                     style: TextStyles.button.apply(
-                        fontSizeDelta: 1
+                        fontSizeDelta: 1,
+                      // fontFamily: 'GEDinarOne',
                     )
                 ),
                 if (txtBold.isNotEmpty)

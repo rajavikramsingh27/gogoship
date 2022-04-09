@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gogoship/Components/AppBarTab.dart';
+import 'package:gogoship/Components/AppBarStyle.dart';
+import 'package:gogoship/Components/DrawerStyle.dart';
 import 'package:gogoship/Controllers/MyOrderController.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
 import 'package:gogoship/Styles/EffectStyle.dart';
@@ -15,10 +16,18 @@ class MyOrders extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(MyOrderController());
+    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
     return Scaffold(
       backgroundColor: ColorStyle.borderColorTF1,
-      appBar: AppBarStyle.appBar,
+
+    key: _scaffoldKey,
+    drawer: DrawerStyle(),
+    appBar: AppBarStyle(
+    onTap: () {
+    _scaffoldKey.currentState?.openDrawer();
+    },
+    ),
       body: Column(
         children: [
           SizedBox(height: 40,),
@@ -35,7 +44,8 @@ class MyOrders extends StatelessWidget {
                   'Order Details ',
                   style: TextStyle(
                       color: ColorStyle.borderColorTF,
-                      fontSize: 18
+                      fontSize: 18,
+                    fontFamily: 'GEDinarOne',
 
                   ),
                 ),
@@ -69,7 +79,8 @@ class MyOrders extends StatelessWidget {
                 'Sort By ',
                 style: TextStyle(
                     color: ColorStyle.primaryColor,
-                    fontSize: 22
+                    fontSize: 22,
+                  fontFamily: 'GEDinarOne',
 
                 ),
               ),
@@ -85,7 +96,8 @@ class MyOrders extends StatelessWidget {
                         'All ',
                         style: TextStyle(
                             color: ColorStyle.primaryColor,
-                            fontSize: 15
+                            fontSize: 15,
+                          fontFamily: 'GEDinarOne',
 
                         ),
                       ),
@@ -146,7 +158,8 @@ class MyOrders extends StatelessWidget {
                                 'FS-552148 ',
                                 style: TextStyle(
                                     color: ColorStyle.primaryColor,
-                                    fontSize: 12
+                                    fontSize: 12,
+                                  fontFamily: 'GEDinarOne',
 
                                 ),
                               ),
@@ -158,7 +171,8 @@ class MyOrders extends StatelessWidget {
                                     '15.23S - Trendyol',
                                     style: TextStyle(
                                         color: ColorStyle.bgColor,
-                                        fontSize: 12
+                                        fontSize: 12,
+
 
                                     ),
                                   ),
@@ -168,7 +182,8 @@ class MyOrders extends StatelessWidget {
                                     '15/11/2021 - 4:20 PM',
                                     style: TextStyle(
                                         color: ColorStyle.primaryColor,
-                                        fontSize: 12
+                                        fontSize: 12,
+                                      fontFamily: 'GEDinarOne',
 
                                     ),
                                   ),
@@ -186,9 +201,9 @@ class MyOrders extends StatelessWidget {
                                 controller.listOrder[index],
                                 style: TextStyle(
                                     color: ColorStyle.primaryColor,
-                                    fontSize: 12
-
-                                ),
+                                    fontSize: 12,
+                                  fontFamily: 'GEDinarOne',
+                                )
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(16),
@@ -199,10 +214,6 @@ class MyOrders extends StatelessWidget {
                                   )
                               )
                           )
-
-
-
-
                         ],
                       ),
                       decoration: EffectStyle.shadowOrders()

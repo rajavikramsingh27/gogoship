@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gogoship/Components/DrawerStyle.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
-import 'package:gogoship/Components/AppBarTab.dart';
+import 'package:gogoship/Components/AppBarStyle.dart';
 import 'package:gogoship/Components/TextFields.dart';
 import 'package:gogoship/Styles/TextStyles.dart';
 import 'package:gogoship/Styles/EffectStyle.dart';
@@ -11,10 +12,19 @@ class NewOrder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
     return Scaffold(
         backgroundColor: ColorStyle.secondaryColor,
         resizeToAvoidBottomInset: true,
-        appBar: AppBarStyle.appBar,
+
+        key: _scaffoldKey,
+        drawer: DrawerStyle(),
+        appBar: AppBarStyle(
+          onTap: () {
+            _scaffoldKey.currentState?.openDrawer();
+          },
+        ),
         body:SingleChildScrollView(
           padding: EffectStyle.paddingNewOrder(),
           child:  Column(
@@ -85,6 +95,7 @@ class NewOrder extends StatelessWidget {
                                 '1',
                                 style: TextStyles.button.apply(
                                   color: Colors.black,
+                                  fontFamily: 'GEDinarOne',
                                 ),),
                               Icon(
                                   Icons.add,
@@ -110,6 +121,7 @@ class NewOrder extends StatelessWidget {
                 'Any Note?',
                 style: TextStyles.button.apply(
                   color: Colors.white,
+
                 ),),
               SizedBox(height: 10),
               TextFieldsWhiteRound(),
