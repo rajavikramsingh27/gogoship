@@ -90,23 +90,36 @@ class NewOrder extends StatelessWidget {
                           ),),
                         SizedBox(height: 10),
                         Container(
-                          padding: EffectStyle.paddingNewOrderr(),
+                          // padding: EffectStyle.paddingNewOrderr(),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Icon(
-                                Icons.remove,
-                                size: 17,
+                              IconButton(
+                                icon: Icon(
+                                  Icons.remove,
+                                  size: 30,
+                                ),
+                                onPressed: () {
+                                  if (controller.quantity.value > 1)
+                                  controller.quantity.value = controller.quantity.value-1;
+                                },
                               ),
                               Text(
-                                '1',
+                                controller.quantity.value.toString(),
                                 style: TextStyles.button.apply(
                                   color: Colors.black,
                                   fontFamily: 'GEDinarOne',
-                                ),),
-                              Icon(
-                                Icons.add,
-                                size: 17,
+                                  fontSizeDelta: 5
+                                ),
+                              ),
+                              IconButton(
+                                icon: Icon(
+                                  Icons.add,
+                                  size: 30,
+                                ),
+                                onPressed: () {
+                                  controller.quantity.value = controller.quantity.value+1;
+                                },
                               ),
                             ],
                           ),

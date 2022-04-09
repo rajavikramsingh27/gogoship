@@ -115,54 +115,48 @@ class TextFieldsWhiteRound extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          height: 50,
-          decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black38,
-                blurRadius: 10,
-                offset: const Offset(0, 5),
-              ),
-            ],
+    return Container(
+      height: 50,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black38,
+            blurRadius: 10,
+            offset: const Offset(0, 5),
           ),
-          child: TextFormField(
-            textAlignVertical: TextAlignVertical.bottom,
-            controller: controller,
-            keyboardType: keyboardType,
-            obscureText: obscureText!,
-            decoration: InputDecoration(
-              fillColor: ColorStyle.primaryColor,
-              filled: true,
-              // focusColor: Colors.red,
-
-              focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  width: 0.5,
-                  // color: ColorStyle.borderColorTF.withOpacity(0.4), width: 1.0,
-                  color: Colors.yellow,
-                ),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  width: 0.5,
-                  // color: ColorStyle.borderColorTF.withOpacity(0.4), width: 1.0,
-                  color: Colors.yellow,
-                ),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              hintText: hintText,
-              hintStyle: TextStyle(
-                  fontSize: 16,
-                  fontFamily: 'GEDinarOne',
-                  color: Colors.black26),
+        ],
+      ),
+      child: TextFormField(
+        textAlignVertical: TextAlignVertical.bottom,
+        controller: controller,
+        keyboardType: keyboardType,
+        obscureText: obscureText!,
+        decoration: InputDecoration(
+          fillColor: ColorStyle.primaryColor,
+          filled: true,
+          contentPadding: EdgeInsets.only(left: 16, bottom: 20.0),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              width: 0.5,
+              color: Colors.yellow,
             ),
+            borderRadius: BorderRadius.circular(12),
           ),
-        )
-      ],
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              width: 0.5,
+              color: Colors.yellow,
+            ),
+            borderRadius: BorderRadius.circular(12),
+          ),
+          hintText: hintText,
+          hintStyle: TextStyle(
+              fontSize: 16,
+              fontFamily: 'GEDinarOne',
+              color: Colors.black26),
+        ),
+      ),
     );
   }
 }

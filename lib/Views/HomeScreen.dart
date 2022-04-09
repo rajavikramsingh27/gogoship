@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
             _scaffoldKey.currentState?.openDrawer();
           },
         ),
-        body: GetBuilder<HomeScreenController>(
+        body:  GetBuilder<HomeScreenController>(
           init: HomeScreenController(),
           initState: (state) {
             controller.reset();
@@ -157,7 +157,8 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ));
           },
-        ));
+        )
+    );
   }
 }
 

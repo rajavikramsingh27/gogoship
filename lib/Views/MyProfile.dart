@@ -36,6 +36,12 @@ class MyProfile extends StatelessWidget {
             children: [
               SizedBox(height: 30),
               Container(
+                width: double.infinity,
+                padding: EdgeInsets.only(top: 5, bottom: 5),
+                decoration: BoxDecoration(
+                  color: ColorStyle.bgColor,
+                  borderRadius: BorderRadius.circular(12),
+                ),
                 child: Column(
                   children: [
                     Icon(
@@ -50,16 +56,6 @@ class MyProfile extends StatelessWidget {
                       ),
                     ),
                   ],
-                ),
-                width: double.infinity,
-                height: 70,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: ColorStyle.bgColor,
-                    width: 0.5,
-                  ),
-                  color: ColorStyle.bgColor,
-                  borderRadius: BorderRadius.circular(12),
                 ),
               ),
               SizedBox(height: 15),

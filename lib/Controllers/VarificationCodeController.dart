@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:gogoship/Views/HomeScreen.dart';
+import 'package:gogoship/Views/TabbarScreen.dart';
+
 
 
 class VerificationCodeController extends GetxController {
@@ -35,7 +36,7 @@ class VerificationCodeController extends GetxController {
     print(txtOTP_Third.value.text);
     print(txtOTP_Fourth.value.text);
 
-    Get.offAll(HomeScreen());
+    Get.offAll(TabbarScreen());
   }
 
 }

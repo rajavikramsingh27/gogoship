@@ -263,7 +263,8 @@ class VerificationCode extends StatelessWidget {
                           ),
                         ),
                         ComponentsAuthBottom.authBottom(
-                            'Resend the code', '', Container())
+                            'Resend the code', '', Container()
+                        )
                       ],
                     ),
                   ),

@@ -34,14 +34,17 @@ class MyAccountPage extends StatelessWidget {
           },
           builder: (authController) {
             return Obx(() =>   GridView.builder(
-              padding: EdgeInsets.only(top: 20),
+              padding: EdgeInsets.only(
+                  top: 20,
+                left: 16, right: 16
+              ),
               shrinkWrap: true,
                 itemCount: controller.listIcons.length,
                 gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 27,
-                    mainAxisExtent: 75,
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16,
+                    mainAxisExtent: 80,
                 ),
                 itemBuilder: (BuildContext context, int index){
                   return   Container(

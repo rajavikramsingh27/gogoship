@@ -6,7 +6,7 @@ import 'package:gogoship/Styles/TextStyles.dart';
 import 'package:gogoship/Styles/Components.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
 import 'package:get/get.dart';
-import 'package:gogoship/Views/HomeScreen.dart';
+import 'package:gogoship/Views/TabbarScreen.dart';
 
 
 class LogIn extends StatelessWidget {
@@ -91,7 +91,7 @@ class LogIn extends StatelessWidget {
                                 height: 14,
                               ),
                               ComponentsAuthSubmit.submitAuth('PROCEED', () {
-                                Get.offAll(HomeScreen());
+                                Get.offAll(TabbarScreen());
                               }),
                               SizedBox(
                                 height: 10,

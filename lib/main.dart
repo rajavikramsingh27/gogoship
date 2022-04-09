@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
 import 'package:gogoship/Views/SplashScreen.dart';
+import 'package:gogoship/Views/NewOrder.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,4 +28,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 

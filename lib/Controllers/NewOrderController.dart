@@ -5,5 +5,5 @@ class NewOrderController extends GetxController {
 
   RxBool agree = false.obs;
 
-
+  RxInt quantity = 1.obs;
 }
