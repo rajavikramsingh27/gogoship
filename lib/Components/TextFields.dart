@@ -47,7 +47,8 @@ class TextFieldsPassword extends StatefulWidget {
   final String? hintText;
   final TextInputType? keyboardType;
 
-   TextFieldsPassword({Key? key,
+  TextFieldsPassword({
+    Key? key,
     this.keyboardType = TextInputType.text,
     this.controller,
     this.hintText,
@@ -82,16 +83,16 @@ class _TextFieldsPasswordState extends State<TextFieldsPassword> {
               fontSize: 16, fontFamily: 'Raleway', color: Colors.black26),
           suffixIcon: InkWell(
             child: Icon(
-              widget.obscureText ? Icons.visibility_outlined : Icons.visibility_off_outlined,
+              widget.obscureText
+                  ? Icons.visibility_outlined
+                  : Icons.visibility_off_outlined,
               size: 24,
               color: ColorStyle.fromHex("#011947").withOpacity(0.6),
             ),
             onTap: () {
               widget.obscureText = !widget.obscureText;
 
-              setState(() {
-
-              });
+              setState(() {});
             },
           )),
     );
@@ -117,41 +118,7 @@ class TextFieldsWhiteRound extends StatelessWidget {
     return Column(
       children: [
         Container(
-        height: 50,
-        child: TextFormField(
-          textAlignVertical: TextAlignVertical.bottom,
-          controller: controller,
-          keyboardType: keyboardType,
-          obscureText: obscureText!,
-          decoration: InputDecoration(
-            fillColor: ColorStyle.primaryColor,
-            filled: true,
-            // focusColor: Colors.red,
-
-            focusedBorder: OutlineInputBorder(
-
-              borderSide: BorderSide(
-                width: 0.5,
-                // color: ColorStyle.borderColorTF.withOpacity(0.4), width: 1.0,
-                color: Colors.yellow,
-              ),
-
-              borderRadius: BorderRadius.circular(12),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                width: 0.5,                // color: ColorStyle.borderColorTF.withOpacity(0.4), width: 1.0,
-                color: Colors.yellow,
-              ),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            hintText: 'Search by order number',
-            hintStyle: TextStyle(
-                fontSize: 16,
-                fontFamily: 'GEDinarOne',
-                color: Colors.black26),
-          ),
-        ),
+          height: 50,
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
@@ -161,10 +128,41 @@ class TextFieldsWhiteRound extends StatelessWidget {
               ),
             ],
           ),
-    )
+          child: TextFormField(
+            textAlignVertical: TextAlignVertical.bottom,
+            controller: controller,
+            keyboardType: keyboardType,
+            obscureText: obscureText!,
+            decoration: InputDecoration(
+              fillColor: ColorStyle.primaryColor,
+              filled: true,
+              // focusColor: Colors.red,
+
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 0.5,
+                  // color: ColorStyle.borderColorTF.withOpacity(0.4), width: 1.0,
+                  color: Colors.yellow,
+                ),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 0.5,
+                  // color: ColorStyle.borderColorTF.withOpacity(0.4), width: 1.0,
+                  color: Colors.yellow,
+                ),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              hintText: hintText,
+              hintStyle: TextStyle(
+                  fontSize: 16,
+                  fontFamily: 'GEDinarOne',
+                  color: Colors.black26),
+            ),
+          ),
+        )
       ],
     );
   }
 }
-
-
