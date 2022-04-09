@@ -31,8 +31,6 @@ class TextStyles {
     fontWeight: FontWeight.normal,
   );
 
-
-
   static TextStyle get button1 => TextStyle(
     fontSize: 18,
     color: ColorStyle.primaryColor,

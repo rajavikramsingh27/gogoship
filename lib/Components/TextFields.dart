@@ -117,9 +117,9 @@ class TextFieldsWhiteRound extends StatelessWidget {
     return Column(
       children: [
         Container(
-          alignment: Alignment.centerLeft,
-        height: 45,
+        height: 50,
         child: TextFormField(
+          textAlignVertical: TextAlignVertical.bottom,
           controller: controller,
           keyboardType: keyboardType,
           obscureText: obscureText!,
@@ -127,6 +127,7 @@ class TextFieldsWhiteRound extends StatelessWidget {
             fillColor: ColorStyle.primaryColor,
             filled: true,
             // focusColor: Colors.red,
+
             focusedBorder: OutlineInputBorder(
 
               borderSide: BorderSide(
@@ -144,16 +145,26 @@ class TextFieldsWhiteRound extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(12),
             ),
-            hintText: 'Search for a store',
+            hintText: 'Search by order number',
             hintStyle: TextStyle(
                 fontSize: 16,
                 fontFamily: 'GEDinarOne',
                 color: Colors.black26),
           ),
         ),
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black38,
+                blurRadius: 10,
+                offset: const Offset(0, 5),
+              ),
+            ],
+          ),
     )
       ],
     );
   }
 }
+
 
