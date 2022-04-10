@@ -52,7 +52,7 @@ class VerificationCode extends StatelessWidget {
                           child: Column(
                             children: [
                               Text("Enter Verification Code",
-                                  style: TextStyles.heading1),
+                                  style: TextStyles.textSize_20),
                               SizedBox(
                                 height: 40,
                               ),
@@ -60,7 +60,7 @@ class VerificationCode extends StatelessWidget {
                                 width: double.infinity,
                                 // decoration: ,
                                 child: Text("4-DIGIT CODE",
-                                    style: TextStyles.button.apply(
+                                    style: TextStyles.textSize_16.apply(
                                         color: ColorStyle.titleColor,
                                         fontSizeDelta: 0.1)),
                               ),

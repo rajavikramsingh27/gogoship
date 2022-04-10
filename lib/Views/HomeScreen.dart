@@ -108,7 +108,7 @@ class HomeScreen extends StatelessWidget {
                               children: [
                                 Text(
                                   "Turkey",
-                                  style: TextStyles.button2
+                                  style: TextStyles.textSize_22
                                       .apply(color: ColorStyle.bgColor),
                                 ),
                                 SizedBox(

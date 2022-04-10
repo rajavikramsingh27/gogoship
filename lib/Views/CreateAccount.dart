@@ -54,7 +54,7 @@ class CreateAccount extends StatelessWidget {
             padding: EffectStyle.paddingAuthWhite(),
             child: Column(
               children: [
-                Text("Create your account", style: TextStyles.heading1),
+                Text("Create your account", style: TextStyles.textSize_20),
                 SizedBox(
                       height: 40,
                 ),

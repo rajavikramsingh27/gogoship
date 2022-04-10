@@ -4,6 +4,7 @@ import 'package:gogoship/Components/DrawerStyle.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
 import 'package:gogoship/Styles/ImageStyle.dart';
 import 'package:gogoship/Styles/EffectStyle.dart';
+import 'package:gogoship/Styles/TextStyles.dart';
 
 
 class OrderDetails extends StatelessWidget {
@@ -38,12 +39,14 @@ class OrderDetails extends StatelessWidget {
                 size: 38,),
                 Text(
                   'Order Details ',
-                  style: TextStyle(
-                      color: ColorStyle.borderColorTF,
-                      fontSize: 18,
-                    fontFamily: 'GEDinarOne',
-
+                  style: TextStyles.textSize_22.apply(
+                    color: Colors.black,
+                    fontSizeFactor: 0.8,
                   ),
+                  // style: TextStyle(
+                  //     color: ColorStyle.borderColorTF,
+                  //     fontSize: 18,
+                  // ),
                 ),
               ],
             ),
@@ -72,45 +75,42 @@ class OrderDetails extends StatelessWidget {
                         Row(
                           children: [
                             Text(
-
                               'Order ID: ',
-                              style: TextStyle(
-                                  color: ColorStyle.bgColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.bgColor,
+                                fontSizeFactor: 0.8,
                               ),
                             ),
                             Text(
 
                               'FS-552148 ',
-                              style: TextStyle(
-                                  color: ColorStyle.primaryColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.primaryColor,
+                                fontSizeFactor: 0.8,
                               ),
                             ),
                             Spacer(),
                             Text(
-
                               'Country:',
-                              style: TextStyle(
-                                  color: ColorStyle.bgColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.bgColor,
+                                fontSizeFactor: 0.8,
                               ),
+                              // style: TextStyle(
+                              //     color: ColorStyle.bgColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             Text(
-
                               'Turkey ',
-                              style: TextStyle(
-                                  color: ColorStyle.primaryColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.primaryColor,
+                                fontSizeFactor: 0.8,
                               ),
+
+
                             ),
                             SizedBox(width: 8,),
                             Image.asset(
@@ -126,22 +126,21 @@ class OrderDetails extends StatelessWidget {
                             Text(
 
                               'Ordered From:',
-                              style: TextStyle(
-                                  color: ColorStyle.bgColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.bgColor,
+                                fontSizeFactor: 0.8,
                               ),
+
                             ),
                             Text(
 
                               'Trendyol.com ',
-                              style: TextStyle(
-                                  color: ColorStyle.primaryColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.primaryColor,
+                                fontSizeFactor: 0.8,
                               ),
+
+
                             ),
 
                           ],
@@ -152,22 +151,31 @@ class OrderDetails extends StatelessWidget {
                             Text(
 
                               'Date & Time:',
-                              style: TextStyle(
-                                  color: ColorStyle.bgColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.bgColor,
+                                fontSizeFactor: 0.8,
                               ),
+
+                              // style: TextStyle(
+                              //     color: ColorStyle.bgColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             Text(
 
                               ' 22/11/2021 - 4:20 PM',
-                              style: TextStyle(
-                                  color: ColorStyle.primaryColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.primaryColor,
+                                fontSizeFactor: 0.8,
                               ),
+                              // style: TextStyle(
+                              //     color: ColorStyle.primaryColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
 
                           ],
@@ -179,22 +187,30 @@ class OrderDetails extends StatelessWidget {
                             Text(
 
                               'Product Link:',
-                              style: TextStyle(
-                                  color: ColorStyle.bgColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.bgColor,
+                                fontSizeFactor: 0.8,
                               ),
+                              // style: TextStyle(
+                              //     color: ColorStyle.bgColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             Text(
 
                               'trendyol.com/... ',
-                              style: TextStyle(
-                                  color: ColorStyle.primaryColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.primaryColor,
+                                fontSizeFactor: 0.8,
                               ),
+                              // style: TextStyle(
+                              //     color: ColorStyle.primaryColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             SizedBox(width: 28,),
                             Image.asset(
@@ -211,64 +227,90 @@ class OrderDetails extends StatelessWidget {
                             Text(
 
                               'Quantity: ',
-                              style: TextStyle(
-                                  color: ColorStyle.bgColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.bgColor,
+                                fontSizeFactor: 0.8,
                               ),
+                              // style: TextStyle(
+                              //     color: ColorStyle.bgColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             Text(
 
                               '1 ',
-                              style: TextStyle(
-                                  color: ColorStyle.primaryColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.primaryColor,
+                                fontSizeFactor: 0.8,
                               ),
+                              // style: TextStyle(
+                              //     color: ColorStyle.primaryColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             SizedBox(width: 70,),
                             Text(
 
                               'Color:',
-                              style: TextStyle(
-                                  color: ColorStyle.bgColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.bgColor,
+                                fontSizeFactor: 0.8,
                               ),
+                              // style: TextStyle(
+                              //     color: ColorStyle.bgColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             Text(
 
                               'Red ',
-                              style: TextStyle(
-                                  color: ColorStyle.primaryColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.primaryColor,
+                                fontSizeFactor: 0.8,
                               ),
+                              // style: TextStyle(
+                              //     color: ColorStyle.primaryColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             SizedBox(width: 20,),
                             Text(
 
                               'Size:',
-                              style: TextStyle(
-                                  color: ColorStyle.bgColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.bgColor,
+                                fontSizeFactor: 0.8,
                               ),
+
+                              // style: TextStyle(
+                              //     color: ColorStyle.bgColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             Text(
 
                               'L ',
-                              style: TextStyle(
-                                  color: ColorStyle.primaryColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.primaryColor,
+                                fontSizeFactor: 0.8,
                               ),
+
+                              // style: TextStyle(
+                              //     color: ColorStyle.primaryColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
 
 
@@ -281,64 +323,92 @@ class OrderDetails extends StatelessWidget {
                             Text(
 
                               'Total: ',
-                              style: TextStyle(
-                                  color: ColorStyle.bgColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.bgColor,
+                                fontSizeFactor: 0.8,
                               ),
+
+                              // style: TextStyle(
+                              //     color: ColorStyle.bgColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             Text(
 
-                              '27:30S ',
-                              style: TextStyle(
-                                  color: ColorStyle.primaryColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              '27:30\$ ',
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.primaryColor,
+                                fontSizeFactor: 0.8,
                               ),
+
+                              // style: TextStyle(
+                              //     color: ColorStyle.primaryColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             SizedBox(width: 40,),
                             Text(
 
                               'Cost:',
-                              style: TextStyle(
-                                  color: ColorStyle.bgColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.bgColor,
+                                fontSizeFactor: 0.8,
                               ),
+
+                              // style: TextStyle(
+                              //     color: ColorStyle.bgColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             Text(
 
-                              '24.30S ',
-                              style: TextStyle(
-                                  color: ColorStyle.primaryColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              '24.30\$ ',
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.primaryColor,
+                                fontSizeFactor: 0.8,
                               ),
+
+                              // style: TextStyle(
+                              //     color: ColorStyle.primaryColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             SizedBox(width: 20,),
                             Text(
 
                               'Fees:',
-                              style: TextStyle(
-                                  color: ColorStyle.bgColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.bgColor,
+                                fontSizeFactor: 0.8,
                               ),
+                              // style: TextStyle(
+                              //     color: ColorStyle.bgColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             Text(
 
-                              '3.00S',
-                              style: TextStyle(
-                                  color: ColorStyle.primaryColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              '3.00\$',
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.primaryColor,
+                                fontSizeFactor: 0.8,
                               ),
+                              // style: TextStyle(
+                              //     color: ColorStyle.primaryColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
 
 
@@ -351,43 +421,59 @@ class OrderDetails extends StatelessWidget {
                             Text(
 
                               'Coupon Code: ',
-                              style: TextStyle(
-                                  color: ColorStyle.bgColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.bgColor,
+                                fontSizeFactor: 0.8,
                               ),
+                              // style: TextStyle(
+                              //     color: ColorStyle.bgColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             Text(
 
                               'No',
-                              style: TextStyle(
-                                  color: ColorStyle.primaryColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.primaryColor,
+                                fontSizeFactor: 0.8,
                               ),
+                              // style: TextStyle(
+                              //     color: ColorStyle.primaryColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             SizedBox(width: 40,),
                             Text(
 
                               'Insurance:',
-                              style: TextStyle(
-                                  color: ColorStyle.bgColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.bgColor,
+                                fontSizeFactor: 0.8,
                               ),
+                              // style: TextStyle(
+                              //     color: ColorStyle.bgColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             Text(
 
                               'No',
-                              style: TextStyle(
-                                  color: ColorStyle.primaryColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.primaryColor,
+                                fontSizeFactor: 0.8,
                               ),
+                              // style: TextStyle(
+                              //     color: ColorStyle.primaryColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
 
 
@@ -401,12 +487,16 @@ class OrderDetails extends StatelessWidget {
                             Text(
 
                               'Status:',
-                              style: TextStyle(
-                                  color: ColorStyle.bgColor,
-                                  fontSize: 15,
-                                fontFamily: 'GEDinarOne',
-
+                              style: TextStyles.textSize_16.apply(
+                                color: ColorStyle.bgColor,
+                                fontSizeFactor: 0.8,
                               ),
+                              // style: TextStyle(
+                              //     color: ColorStyle.bgColor,
+                              //     fontSize: 15,
+                              //   fontFamily: 'GEDinarOne',
+                              //
+                              // ),
                             ),
                             InkWell(
                               child: Container(
@@ -414,14 +504,17 @@ class OrderDetails extends StatelessWidget {
                                 width: 76,
                                 height: 24,
                                 child:  Text(
-
                                   'Cancelled',
-                                  style: TextStyle(
-                                      color: Colors.red,
-                                      fontSize: 15,
-                                    fontFamily: 'GEDinarOne',
-
+                                  style: TextStyles.textSize_16.apply(
+                                    color: ColorStyle.redColor,
+                                    fontSizeFactor: 0.8,
                                   ),
+                                  // style: TextStyle(
+                                  //     color: Colors.red,
+                                  //     fontSize: 15,
+                                  //   fontFamily: 'GEDinarOne',
+                                  //
+                                  // ),
                                 ),
                                 decoration: BoxDecoration(
                                     color: ColorStyle.primaryColor,

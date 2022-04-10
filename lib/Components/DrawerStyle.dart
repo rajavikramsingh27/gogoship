@@ -138,7 +138,7 @@ class DrawerStyle extends StatelessWidget {
                               ],
                             ),
                             SizedBox(
-                              height: 120,
+                              height: 80,
                             ),
                             InkWell(
                               child: Row(
@@ -156,10 +156,9 @@ class DrawerStyle extends StatelessWidget {
                                   ),
                                   Text(
                                     'Log out',
-                                    style: TextStyles.heading2.apply(
+                                    style: TextStyles.textSize_31.apply(
                                       color: Colors.black,
                                       fontSizeFactor: 0.8,
-                                      fontFamily: 'GEDinarOne',
                                     ),
 
                                     // TextStyle(
@@ -216,7 +215,7 @@ logOut() {
                 children: [
                   Text(
                     'Are You Sure ? ',
-                    style: TextStyles.button2.apply(
+                    style: TextStyles.textSize_22.apply(
                       color: ColorStyle.primaryColor,
                       fontFamily: 'GEDinarOne',
                       // fontWeightDelta: 2
@@ -225,7 +224,7 @@ logOut() {
                   SizedBox(height: 2,),
                   Text(
                     'Do You Want To Logout ? ',
-                    style: TextStyles.button.apply(
+                    style: TextStyles.textSize_16.apply(
                       color: ColorStyle.primaryColor,
                       fontFamily: 'GEDinarOne',
                       // fontWeightDelta: 2

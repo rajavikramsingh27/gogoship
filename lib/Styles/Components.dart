@@ -30,7 +30,7 @@ class ComponentsTF extends StatelessWidget {
       children: [
         Text(
           title!,
-          style: TextStyles.Title,
+          style: TextStyles.textSize_15,
         ),
         SizedBox(height: 6),
         TextFields(
@@ -66,7 +66,7 @@ class ComponentsTFPassword extends StatelessWidget {
       children: [
         Text(
           title!,
-          style: TextStyles.Title,
+          style: TextStyles.textSize_15,
         ),
         SizedBox(height: 6),
         TextFieldsPassword(
@@ -101,7 +101,7 @@ class ComponentsAuthSubmit {
           SizedBox(
             width: 20,
           ),
-          Text(text, style: TextStyles.button),
+          Text(text, style: TextStyles.textSize_16),
           Icon(
             Icons.send_outlined,
             color: ColorStyle.primaryColor,
@@ -219,7 +219,7 @@ class ComponentsAuthBottom {
             TextSpan(
               children: [
                 TextSpan(text: txtNormal,
-                    style: TextStyles.button.apply(
+                    style: TextStyles.textSize_16.apply(
                         fontSizeDelta: 1,
                       // fontFamily: 'GEDinarOne',
                     )
@@ -227,7 +227,7 @@ class ComponentsAuthBottom {
                 if (txtBold.isNotEmpty)
                   TextSpan(
                       text: txtBold,
-                      style: TextStyles.button.apply(
+                      style: TextStyles.textSize_16.apply(
                           fontWeightDelta: 2
                       )
                   ),
