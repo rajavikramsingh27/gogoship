@@ -53,7 +53,7 @@ class LogIn extends StatelessWidget {
                           padding: EffectStyle.paddingAuthWhite(),
                           child: Column(
                             children: [
-                              Text("Log In to your Account.", style: TextStyles.heading1,),
+                              Text("Log In to your Account.", style: TextStyles.textSize_20,),
                               SizedBox(
                                 height: 40,
                               ),
@@ -79,7 +79,7 @@ class LogIn extends StatelessWidget {
                                     fixedSize: Size.fromWidth(MediaQuery.of(context).size.width)
                                 ),
                                 child: Text('Recover Password?',
-                                  style: TextStyles.Title.apply(fontWeightDelta: 1,
+                                  style: TextStyles.textSize_15.apply(fontWeightDelta: 1,
                                     fontFamily: 'GEDinarOne',
                                   ),
                                 ),

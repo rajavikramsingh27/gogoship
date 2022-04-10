@@ -649,7 +649,7 @@ class MyOrdersDetails extends StatelessWidget {
                           // height: 26,
                           width: 113,
                           child:  Row(
-                            // mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
                                 'Status:',

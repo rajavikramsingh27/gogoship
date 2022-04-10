@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gogoship/Components/Buttons.dart';
 import 'package:gogoship/Components/DrawerStyle.dart';
 import 'package:get/get.dart';
 import 'package:gogoship/Controllers/MyProfileController.dart';
@@ -50,7 +51,7 @@ class MyProfile extends StatelessWidget {
                     ),
                     Text(
                       'My Profile',
-                      style: TextStyles.button1.apply(
+                      style: TextStyles.textSize_18.apply(
                         color: Colors.black,
                         fontFamily: 'GEDinarOne',
                       ),
@@ -69,7 +70,7 @@ class MyProfile extends StatelessWidget {
               SizedBox(height: 10),
               Text(
                 'Name',
-                style: TextStyles.button.apply(
+                style: TextStyles.textSize_16.apply(
                   color: Colors.white,
                   fontFamily: 'GEDinarOne',
                 ),
@@ -79,7 +80,7 @@ class MyProfile extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 'Address',
-                style: TextStyles.button.apply(
+                style: TextStyles.textSize_16.apply(
                   color: Colors.white,
                   fontFamily: 'GEDinarOne',
                 ),
@@ -89,7 +90,7 @@ class MyProfile extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 'Province',
-                style: TextStyles.button.apply(
+                style: TextStyles.textSize_16.apply(
                   color: Colors.white,
                   fontFamily: 'GEDinarOne',
                 ),
@@ -99,7 +100,7 @@ class MyProfile extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 'Phone',
-                style: TextStyles.button.apply(
+                style: TextStyles.textSize_16.apply(
                   color: Colors.white,
                   fontFamily: 'GEDinarOne',
                 ),
@@ -109,7 +110,7 @@ class MyProfile extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 'Email',
-                style: TextStyles.button.apply(
+                style: TextStyles.textSize_16.apply(
                   color: Colors.white,
                   fontFamily: 'GEDinarOne',
                 ),
@@ -119,7 +120,7 @@ class MyProfile extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 'Password',
-                style: TextStyles.button.apply(
+                style: TextStyles.textSize_16.apply(
                   color: Colors.white,
                   // fontFamily: 'GEDinarOne',
                 ),
@@ -129,13 +130,18 @@ class MyProfile extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 'Gender',
-                style: TextStyles.button.apply(
+                style: TextStyles.textSize_16.apply(
                   color: Colors.white,
                   fontFamily: 'GEDinarOne',
                 ),
               ),
               SizedBox(height: 10),
               TextFieldsWhiteRound(),
+              SizedBox(height: 40),
+              SubmitButton(onTap: () {
+
+              },),
+
 
               // Container(
               //   alignment: Alignment.center,

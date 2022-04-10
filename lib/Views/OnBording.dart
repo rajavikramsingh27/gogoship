@@ -99,7 +99,7 @@ class _OnBordingState extends State<OnBording> {
                                 ),
                                 Text(
                                   'Shopping Online',
-                                  style: TextStyles.button2.apply(
+                                  style: TextStyles.textSize_22.apply(
                                     color: Colors.white,
                                     fontFamily: 'GEDinarOne'
                                   ),
@@ -109,7 +109,7 @@ class _OnBordingState extends State<OnBording> {
                                 ),
                                 Text(
                                   'Become So Easy',
-                                  style: TextStyles.button2.apply(
+                                  style: TextStyles.textSize_22.apply(
                                     color: Colors.white,
                                       fontFamily: 'GEDinarOne',
                                   ),

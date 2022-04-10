@@ -39,7 +39,7 @@ class NewOrder extends StatelessWidget {
             children: [
               Text(
                 'Product Name',
-                style: TextStyles.button.apply(
+                style: TextStyles.textSize_16.apply(
                   color: Colors.white,
                 ),),
               SizedBox(height: 10),
@@ -47,7 +47,7 @@ class NewOrder extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 'Product URL',
-                style: TextStyles.button.apply(
+                style: TextStyles.textSize_16.apply(
                   color: Colors.white,
                 ),),
               SizedBox(height: 10),
@@ -55,7 +55,7 @@ class NewOrder extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 'Product Color',
-                style: TextStyles.button.apply(
+                style: TextStyles.textSize_16.apply(
                   color: Colors.white,
                 ),),
               SizedBox(height: 10),
@@ -69,7 +69,7 @@ class NewOrder extends StatelessWidget {
                       children: [
                         Text(
                           'Product Size',
-                          style: TextStyles.button.apply(
+                          style: TextStyles.textSize_16.apply(
                             color: Colors.white,
                           ),),
                         SizedBox(height: 10),
@@ -85,7 +85,7 @@ class NewOrder extends StatelessWidget {
                       children: [
                         Text(
                           'Quantity',
-                          style: TextStyles.button.apply(
+                          style: TextStyles.textSize_16.apply(
                             color: Colors.white,
                           ),),
                         SizedBox(height: 10),
@@ -106,7 +106,7 @@ class NewOrder extends StatelessWidget {
                               ),
                               Text(
                                 controller.quantity.value.toString(),
-                                style: TextStyles.button.apply(
+                                style: TextStyles.textSize_16.apply(
                                   color: Colors.black,
                                   fontFamily: 'GEDinarOne',
                                   fontSizeDelta: 5
@@ -139,7 +139,7 @@ class NewOrder extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 'Any Note?',
-                style: TextStyles.button.apply(
+                style: TextStyles.textSize_16.apply(
                   color: Colors.white,
 
                 ),),
@@ -154,7 +154,7 @@ class NewOrder extends StatelessWidget {
                 children: [
                   Text(
                     'Do you have Coupon Code?',
-                    style: TextStyles.button.apply(
+                    style: TextStyles.textSize_16.apply(
                       color: Colors.white,
                     ),),
                   SizedBox(
@@ -199,6 +199,7 @@ class NewOrder extends StatelessWidget {
               ButtonDone(onTap: () {
 
               },),
+
             ],
           ),
         ))

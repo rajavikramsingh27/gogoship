@@ -40,3 +40,41 @@ class ButtonDone extends StatelessWidget {
   }
 }
 
+
+
+class SubmitButton extends StatelessWidget {
+
+  final Function()? onTap;
+
+  const SubmitButton({Key? key, this.onTap,})
+      : super(key: key);
+
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        primary: ColorStyle.bgColor,
+        fixedSize: Size(MediaQuery.of(context).size.width, 50),
+        elevation: 2,
+        padding: EdgeInsets.only(
+          left: 20,
+          right: 20,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(SizeStyle.radius),
+        ),
+      ),
+
+      child: Text(
+        'Submit',
+        style: TextStyle(
+          fontFamily: 'GEDinarOne',
+          fontSize: 20,
+        ),
+      ),
+      onPressed: onTap,
+    );
+  }
+}
+
