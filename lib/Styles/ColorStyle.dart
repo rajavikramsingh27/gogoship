@@ -11,6 +11,7 @@ class ColorStyle {
   static final Color borderColorTF12 =  fromHex("#000000").withOpacity(16);
   static final Color royalColor =  fromHex("#F5F7FB");
   static final Color redColor =  fromHex("#FF0000");
+  static final Color blue =  fromHex("#115173");
 
 
 

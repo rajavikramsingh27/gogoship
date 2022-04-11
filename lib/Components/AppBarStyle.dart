@@ -75,14 +75,18 @@ class AppBarStyle1 extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
-        leading:  Image.asset(
-          ImageStyle.Layer1,
-          width: 70,
-          height: 70,
+        leadingWidth: 100,
+        leading:  Row(
+          children: [
+            SizedBox(width: 16,),
+            Image.asset(
+              ImageStyle.Layer1,
+              // width: 70,
+              height: 30,
+            ),
+          ],
         ),
-        // centerTitle: true,
         actions: [
-
        Row(
          children: [
            Container(
@@ -140,3 +144,56 @@ class AppBarStyle1 extends StatelessWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize => new Size.fromHeight(50);
 }
+
+
+
+class AppBarStyle2 extends StatelessWidget implements PreferredSizeWidget {
+  final Function()? onTap;
+
+  const AppBarStyle2({Key? key, this.onTap})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PreferredSize(
+      preferredSize: Size.fromHeight(45.0),
+      child: AppBar(
+
+        elevation: 0,
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Image.asset(
+          ImageStyle.Layer1,
+          width: 70,
+          height: 70,
+        ),
+        leading: BackButton(
+          color: Colors.black,
+        ),
+        actions: [
+          Row(
+            children: [
+              Text(
+                '1,100t',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.black,
+                  // fontFamily: 'GEDinarOne',
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            width: 20,
+          )
+        ],
+      ),
+    );
+  }
+
+  @override
+  Size get preferredSize => new Size.fromHeight(50);
+}
+
+
+

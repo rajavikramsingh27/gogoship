@@ -8,6 +8,8 @@ import 'package:gogoship/Styles/EffectStyle.dart';
 import 'package:gogoship/Styles/ImageStyle.dart';
 
 import '../Components/TextFields.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
+
 
 
 
@@ -21,7 +23,7 @@ class MyOrdersDetails extends StatelessWidget {
     
     return Scaffold(
       backgroundColor: ColorStyle.royalColor,
-      appBar: AppBarStyle(),
+      appBar: AppBarStyle2(),
       body: SingleChildScrollView(
         child: Container(
           // padding: EdgeInsets.only(left: 10,right: 10,top: 10),
@@ -154,24 +156,39 @@ class MyOrdersDetails extends StatelessWidget {
                             color: ColorStyle.bgColor
                         )
                     ),
-                      child:  Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'All ',
+                      child:   DropdownButtonHideUnderline(
+                        child: DropdownButton2(
+                          hint: Text(
+                            'Items',
                             style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 15,
-                              fontFamily: 'GEDinarOne',
+                              color: ColorStyle.titleColor,
+                              fontSize: 12,
+                              // color: Theme
+                              //     .of(context)
+                              //     .hintColor,
                             ),
                           ),
-                          SizedBox(width: 7,),
-                          Image.asset(
-                            ImageStyle.Layer4,
-                            width: 15,
-                            height: 15,
-                          ),
-                        ],
+                          items: controller.items
+                              .map((item) =>
+                              DropdownMenuItem<String>(
+                                value: item,
+                                child: Text(
+                                  item,
+                                  style: const TextStyle(
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ))
+                              .toList(),
+                          value: controller.selectedValue,
+                          onChanged: (value) {
+                            controller.selectedValue = value as String;
+
+                          },
+                          buttonHeight: 25,
+                          buttonWidth:80,
+                          itemHeight: 40,
+                        ),
                       ),
 
                   )

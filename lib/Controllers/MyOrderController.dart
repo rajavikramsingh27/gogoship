@@ -6,6 +6,24 @@ class MyOrderController extends GetxController {
   RxInt intAppBar = 0.obs;
 
 
+
+
+  String? selectedValue;
+
+  List<String> items = [
+    'Item1',
+    'Item2',
+    'Item3',
+    'All',
+  ];
+
+
+
+
+
+
+
+
   RxList<String> listOrder = [
     'Cancelled  ','Paid','Pending','Processing','Waiting'
   ].obs;
