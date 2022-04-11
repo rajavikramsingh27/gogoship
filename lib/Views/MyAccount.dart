@@ -33,7 +33,6 @@ class MyAccount extends StatelessWidget {
           width: double.infinity,
           child: SingleChildScrollView(
             // padding: EdgeInsets.only(
-            //
             //     // bottom: 20
             // ),
             child: Column(
@@ -86,108 +85,117 @@ class MyAccount extends StatelessWidget {
                                 height: 16,
                               ),
                               Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Container(
-                                    height: 25,
-                                    width: 25,
-                                    alignment: Alignment.center,
-                                    decoration: BoxDecoration(
-                                        color: ColorStyle.bgColor,
-                                        borderRadius: BorderRadius.circular(5)
-                                    ),
-                                    child: Text(
-                                      index.toString(),
-                                      style: TextStyle(
-                                        color: ColorStyle.borderColorTF,
-                                        fontSize: 20,
-                                        fontFamily: 'GEDinarOne',
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  Image.asset(
-                                    ImageStyle.Layer5,
-                                    width: 55,
-                                    height: 55,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                  Row(
                                     children: [
-                                      Text(
-                                        'Item 01 Name (1)',
-                                        style: TextStyle(
-                                          color: ColorStyle.borderColorTF,
-                                          fontSize: 14,
-                                          fontFamily: 'GEDinarOne',
+                                      Container(
+                                        height: 25,
+                                        width: 25,
+                                        alignment: Alignment.center,
+                                        decoration: BoxDecoration(
+                                            color: ColorStyle.bgColor,
+                                            borderRadius: BorderRadius.circular(5)
+                                        ),
+                                        child: Text(
+                                          index.toString(),
+                                          style: TextStyle(
+                                            color: ColorStyle.borderColorTF,
+                                            fontSize: 20,
+                                            fontFamily: 'GEDinarOne',
+                                          ),
                                         ),
                                       ),
                                       SizedBox(
-                                        height: 8,
+                                        width: 5,
                                       ),
-                                      Text(
-                                        'Size: L',
-                                        style: TextStyle(
-                                          color: ColorStyle.borderColorTF,
-                                          fontSize: 14,
-                                          fontFamily: 'GEDinarOne',
-                                        ),
+                                      Image.asset(
+                                        ImageStyle.Layer5,
+                                        width: 55,
+                                        height: 55,
+                                      ),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Item 01 Name (1)',
+                                            style: TextStyle(
+                                              color: ColorStyle.borderColorTF,
+                                              fontSize: 14,
+                                              fontFamily: 'GEDinarOne',
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 8,
+                                          ),
+                                          Text(
+                                            'Size: L',
+                                            style: TextStyle(
+                                              color: ColorStyle.borderColorTF,
+                                              fontSize: 14,
+                                              fontFamily: 'GEDinarOne',
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            '(20 S)',
+                                            style: TextStyle(
+                                              color: ColorStyle.borderColorTF,
+                                              fontSize: 14,
+                                              fontFamily: 'GEDinarOne',
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 8,
+                                          ),
+                                          Text(
+                                            'Color: Green',
+                                            style: TextStyle(
+                                              color: ColorStyle.borderColorTF,
+                                              fontSize: 14,
+                                              fontFamily: 'GEDinarOne',
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ],
                                   ),
-                                  Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                  Row(
                                     children: [
-                                      Text(
-                                        '(20 S)',
-                                        style: TextStyle(
-                                          color: ColorStyle.borderColorTF,
-                                          fontSize: 14,
-                                          fontFamily: 'GEDinarOne',
+                                      InkWell(
+                                        child: Container(
+                                          width: 34,
+                                          height: 34,
+                                          decoration: BoxDecoration(
+                                              color: ColorStyle.bgColor,
+                                              borderRadius: BorderRadius.circular(34)),
+                                          child: Icon(
+                                            Icons.add,
+                                            size: 20,
+                                          ),
                                         ),
+                                        onTap: () {},
                                       ),
-                                      SizedBox(
-                                        height: 8,
-                                      ),
-                                      Text(
-                                        'Color: Green',
-                                        style: TextStyle(
-                                          color: ColorStyle.borderColorTF,
-                                          fontSize: 14,
-                                          fontFamily: 'GEDinarOne',
+                                      SizedBox(width: 4),
+                                      InkWell(
+                                        child: Container(
+                                          width: 34,
+                                          height: 34,
+                                          decoration: BoxDecoration(
+                                              color: ColorStyle.bgColor,
+                                              borderRadius: BorderRadius.circular(34)),
+                                          child: Icon(
+                                            Icons.delete,
+                                            size: 20,
+                                          ),
                                         ),
+                                        onTap: () {},
                                       ),
                                     ],
-                                  ),
-                                  InkWell(
-                                    child: Container(
-                                      width: 34,
-                                      height: 34,
-                                      decoration: BoxDecoration(
-                                          color: ColorStyle.bgColor,
-                                          borderRadius: BorderRadius.circular(34)),
-                                      child: Icon(
-                                        Icons.add,
-                                        size: 20,
-                                      ),
-                                    ),
-                                    onTap: () {},
-                                  ),
-                                  SizedBox(width: 4),
-                                  InkWell(
-                                    child: Container(
-                                      width: 34,
-                                      height: 34,
-                                      decoration: BoxDecoration(
-                                          color: ColorStyle.bgColor,
-                                          borderRadius: BorderRadius.circular(34)),
-                                      child: Icon(
-                                        Icons.delete,
-                                        size: 20,
-                                      ),
-                                    ),
-                                    onTap: () {},
                                   ),
                                 ],
                               ),
@@ -195,9 +203,7 @@ class MyAccount extends StatelessWidget {
                                 height: 16,
                               ),
                               Container(
-                                // margin: EdgeInsets.only(left: 10, right: 10),
                                 height: 1,
-
                                 decoration: BoxDecoration(
                                     color: ColorStyle.borderColorTF,
                                     borderRadius: BorderRadius.circular(10)),
@@ -265,7 +271,8 @@ class MyAccount extends StatelessWidget {
           decoration: BoxDecoration(
             color: ColorStyle.primaryColor,
             borderRadius: BorderRadius.circular(10),
-          )),
+          ),
+      ),
     );
   }
 }

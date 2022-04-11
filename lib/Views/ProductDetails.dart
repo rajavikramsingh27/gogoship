@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gogoship/Components/AppBarStyle.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
@@ -55,42 +56,45 @@ class ProductDetails extends StatelessWidget {
               },
             ),
           ),
-          Container(
-            // color: Colors.red,
-            child: Positioned(
-              // top: 500,
-                bottom: 90,
-              left: 80,
-                child: Container(
-                  width: 202,
-                  height: 51,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'New Order',
-                        style: TextStyles.textSize_25.apply(
-                          color: ColorStyle.primaryColor,
-                          fontSizeFactor: 0.8,
-                        ),
+          Positioned(
+              bottom: 90,
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 54,
+                      padding: EdgeInsets.only(
+                        left: 16, right: 16
                       ),
-                      SizedBox(width: 20),
-                      Icon(
-                        Icons.shopping_cart,
-                        color: ColorStyle.primaryColor,
-                        size: 32,
+                      decoration: BoxDecoration(
+                        color: ColorStyle.secondaryColor.withOpacity(0.6),
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                    color: ColorStyle.blue.withOpacity(0.5),
-                    borderRadius: BorderRadius.circular(10),
-
-
-                  ),
-                )),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'New Order',
+                            style: TextStyles.textSize_25.apply(
+                              color: ColorStyle.primaryColor,
+                              fontSizeFactor: 0.8,
+                            ),
+                          ),
+                          SizedBox(width: 20),
+                          Icon(
+                            Icons.shopping_cart,
+                            color: ColorStyle.primaryColor,
+                            size: 32,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              )
           ),
-
         ],
       )
     );

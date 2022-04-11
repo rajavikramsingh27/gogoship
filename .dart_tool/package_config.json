@@ -62,12 +62,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "dropdown_button2",
-      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/dropdown_button2-1.4.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "fake_async",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0",
       "packageUri": "lib/",
@@ -254,7 +248,7 @@
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-04-11T05:08:00.482434Z",
+  "generated": "2022-04-11T10:51:05.367968Z",
   "generator": "pub",
-  "generatorVersion": "2.16.2"
+  "generatorVersion": "2.16.1"
 }
