@@ -38,6 +38,7 @@ dependencies:
   flutter_swiper_plus:
   flutter_launcher_icons:
   webview_flutter:
+  google_sign_in:
 
 
 

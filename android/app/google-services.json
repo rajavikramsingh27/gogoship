@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "866928403248",
+    "project_id": "gogoship-d30ce",
+    "storage_bucket": "gogoship-d30ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866928403248:android:748a9f94b1e280c5bfdef5",
+        "android_client_info": {
+          "package_name": "com.gogoship.gogoship"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "866928403248-i2apao6je9s82k9bjbavjfmpu85nv4qn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gogoship.gogoship",
+            "certificate_hash": "3fac1b8219bdabd9c30db24f30e3cf8e6725b3d9"
+          }
+        },
+        {
+          "client_id": "866928403248-9evp9824hn4eh0kmrkm2lqmlml0jieuc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtVJG0sZQOnCrljUKe3DNiJZ5R1tnSp-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "866928403248-9evp9824hn4eh0kmrkm2lqmlml0jieuc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
