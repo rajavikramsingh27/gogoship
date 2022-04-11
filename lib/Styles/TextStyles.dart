@@ -13,6 +13,15 @@ class TextStyles {
     fontFamily: kFontFamily,
       );
 
+
+  static TextStyle get textSize_25 => TextStyle(
+    fontSize: 25,
+    color: ColorStyle.primaryColor,
+    fontWeight: FontWeight.normal,
+    fontFamily: kFontFamily,
+
+  );
+
   static TextStyle get textSize_22 => TextStyle(
         fontSize: 22,
         color: ColorStyle.primaryColor,

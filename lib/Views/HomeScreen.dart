@@ -174,7 +174,7 @@ filter() {
               Container(
                 margin: EdgeInsets.only(left: 18, right: 18),
                 height: 432,
-                width: MediaQuery.of(Get.context!).size?.width,
+                width: MediaQuery.of(Get.context!).size.width,
                 decoration: BoxDecoration(
                   color: ColorStyle.primaryColor,
                   borderRadius: BorderRadius.circular(10),

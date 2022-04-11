@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gogoship/Components/AppBarStyle.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
 import 'package:gogoship/Components/DrawerStyle.dart';
+import 'package:gogoship/Styles/TextStyles.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:gogoship/Views/BottomNavigationBarView.dart';
 import 'package:get/get.dart';
@@ -53,7 +54,43 @@ class ProductDetails extends StatelessWidget {
                 Get.offAll(TabbarScreen(indexSelected: 2,));
               },
             ),
-          )
+          ),
+          Container(
+            // color: Colors.red,
+            child: Positioned(
+              // top: 500,
+                bottom: 90,
+              left: 80,
+                child: Container(
+                  width: 202,
+                  height: 51,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'New Order',
+                        style: TextStyles.textSize_25.apply(
+                          color: ColorStyle.primaryColor,
+                          fontSizeFactor: 0.8,
+                        ),
+                      ),
+                      SizedBox(width: 20),
+                      Icon(
+                        Icons.shopping_cart,
+                        color: ColorStyle.primaryColor,
+                        size: 32,
+                      ),
+                    ],
+                  ),
+                  decoration: BoxDecoration(
+                    color: ColorStyle.blue.withOpacity(0.5),
+                    borderRadius: BorderRadius.circular(10),
+
+
+                  ),
+                )),
+          ),
+
         ],
       )
     );
