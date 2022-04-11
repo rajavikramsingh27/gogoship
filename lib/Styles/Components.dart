@@ -6,6 +6,8 @@ import 'package:gogoship/Components/TextFields.dart';
 import 'package:gogoship/Styles/ImageStyle.dart';
 import 'package:gogoship/Styles/SizeStyle.dart';
 
+import 'package:google_sign_in/google_sign_in.dart';
+
 
 class ComponentsTF extends StatelessWidget {
   final TextEditingController? controller;
@@ -146,7 +148,9 @@ class ComponentsSocialSignIn extends StatelessWidget {
               width: 16,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            googleLogin();
+          },
         ),
         SizedBox(width: 26,),
         InkWell(
@@ -240,3 +244,25 @@ class ComponentsAuthBottom {
   }
 }
 
+
+googleLogin() async {
+  GoogleSignIn googleSignIn = GoogleSignIn(
+    scopes: [
+      'email',
+      'https://www.googleapis.com/auth/contacts.readonly',
+    ],
+  );
+
+  try {
+    final user = await googleSignIn.signIn();
+    print("user user user user user user user user user");
+
+    print(user?.id);
+    print(user?.email);
+    print(user?.displayName);
+  } catch (error) {
+    print("error error error error error error error error error");
+    print(error);
+  }
+
+}
