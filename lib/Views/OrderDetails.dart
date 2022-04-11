@@ -1,28 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:gogoship/Components/AppBarStyle.dart';
-import 'package:gogoship/Components/DrawerStyle.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
 import 'package:gogoship/Styles/ImageStyle.dart';
 import 'package:gogoship/Styles/EffectStyle.dart';
 import 'package:gogoship/Styles/TextStyles.dart';
-
+import 'package:get/get.dart';
 
 class OrderDetails extends StatelessWidget {
   const OrderDetails({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
     return Scaffold(
       backgroundColor: ColorStyle.borderColorTF1,
-      // final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
-      key: _scaffoldKey,
-      drawer: DrawerStyle(),
       appBar: AppBarStyle(
+        iconLeading: Icons.arrow_back,
         onTap: () {
-          _scaffoldKey.currentState?.openDrawer();
+          Get.back();
         },
       ),
       body: Column(

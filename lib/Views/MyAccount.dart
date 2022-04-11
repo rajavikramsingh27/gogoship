@@ -23,7 +23,9 @@ class MyAccount extends StatelessWidget {
         },
       ),
       body: Container(
-          margin: EdgeInsets.only(left: 8, right: 8, top: 12, bottom: 12),
+          margin: EdgeInsets.only(left: 8, right: 8, top: 12,
+              // bottom: 12
+          ),
           padding: EdgeInsets.only(
               left: 8,
               right: 8,

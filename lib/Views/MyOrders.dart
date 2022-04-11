@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gogoship/Components/AppBarStyle.dart';
-import 'package:gogoship/Components/DrawerStyle.dart';
 import 'package:gogoship/Controllers/MyOrderController.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
 import 'package:gogoship/Styles/EffectStyle.dart';
@@ -18,16 +17,13 @@ class MyOrders extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(MyOrderController());
-    final GlobalKey<ScaffoldState> _scaffoldKey =
-        new GlobalKey<ScaffoldState>();
 
     return Scaffold(
       backgroundColor: ColorStyle.borderColorTF1,
-      key: _scaffoldKey,
-      drawer: DrawerStyle(),
       appBar: AppBarStyle(
+        iconLeading: Icons.arrow_back,
         onTap: () {
-          _scaffoldKey.currentState?.openDrawer();
+          Get.back();
         },
       ),
       body: GetBuilder(

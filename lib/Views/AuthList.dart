@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gogoship/Views/CreateAccount.dart';
-import 'package:get/get.dart';
 import 'package:gogoship/Views/LogIn.dart';
-import 'package:gogoship/Styles/ColorStyle.dart';
 import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
 
 class AuthList extends StatelessWidget {
@@ -32,3 +30,4 @@ class AuthList extends StatelessWidget {
         ),);
   }
 }
+

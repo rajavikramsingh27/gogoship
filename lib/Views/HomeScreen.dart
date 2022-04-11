@@ -28,6 +28,7 @@ class HomeScreen extends StatelessWidget {
         key: _scaffoldKey,
         drawer: DrawerStyle(),
         appBar: AppBarStyle(
+          iconLeading: Icons.menu,
           onTap: () {
             _scaffoldKey.currentState?.openDrawer();
           },

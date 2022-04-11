@@ -23,8 +23,8 @@ class ProductDetails extends StatelessWidget {
       backgroundColor: ColorStyle.fromHex("#022C43"),
       key: _scaffoldKey,
       drawer: DrawerStyle(),
-
       appBar: AppBarStyle(
+        iconLeading: Icons.menu,
         onTap: () {
           _scaffoldKey.currentState?.openDrawer();
         },

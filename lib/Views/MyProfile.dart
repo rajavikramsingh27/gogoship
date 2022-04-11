@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gogoship/Components/Buttons.dart';
-import 'package:gogoship/Components/DrawerStyle.dart';
+import 'package:gogoship/Components/ButtonStyle.dart';
 import 'package:get/get.dart';
 import 'package:gogoship/Controllers/MyProfileController.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
@@ -15,19 +14,15 @@ class MyProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final GlobalKey<ScaffoldState> _scaffoldKey =
-        new GlobalKey<ScaffoldState>();
-
     final controller = Get.put(MyProfileController());
 
     return Scaffold(
         backgroundColor: ColorStyle.secondaryColor,
         resizeToAvoidBottomInset: true,
-        key: _scaffoldKey,
-        drawer: DrawerStyle(),
         appBar: AppBarStyle(
+          iconLeading: Icons.arrow_back,
           onTap: () {
-            _scaffoldKey.currentState?.openDrawer();
+            Get.back();
           },
         ),
         body: SingleChildScrollView(

@@ -8,8 +8,6 @@ import 'package:gogoship/Views/MyOrders.dart';
 import 'package:gogoship/Views/MyProfile.dart';
 import 'package:gogoship/Views/NewOrder.dart';
 import 'package:gogoship/Views/OrderDetails.dart';
-import 'package:gogoship/Views/VerificationCode.dart';
-import 'package:gogoship/Styles/ColorStyle.dart';
 import 'package:gogoship/Styles/TextStyles.dart';
 import 'package:gogoship/Views/AuthList.dart';
 
@@ -110,15 +108,15 @@ class DrawerStyle extends StatelessWidget {
 
                                              controller.intAppBar.value = index;
                                              if (controller.intAppBar.value == 0)
-                                               Get.off( MyProfile());
+                                               Get.to( MyProfile());
                                              else if (controller.intAppBar == 1)
-                                               Get.off( MyOrders());
+                                               Get.to( MyOrders());
                                              else  if (controller.intAppBar == 2)
-                                               Get.off( OrderDetails());
+                                               Get.to( OrderDetails());
                                              else  if (controller.intAppBar == 3)
-                                               Get.off( MyAccountPage());
-                                             else  if (controller.intAppBar == 4)
-                                               Get.off( NewOrder());
+                                               Get.to( MyAccountPage());
+                                             // else  if (controller.intAppBar == 4)
+                                             //   Get.to( NewOrder());
                                            //   else  if (controller.intAppBar == 5)
                                            //     Get.to( TicketsAndDocuments());
                                            }

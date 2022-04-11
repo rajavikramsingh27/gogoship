@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gogoship/Components/DrawerStyle.dart';
 import 'package:get/get.dart';
 import 'package:gogoship/Controllers/NewOrderController.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
@@ -7,7 +6,10 @@ import 'package:gogoship/Components/AppBarStyle.dart';
 import 'package:gogoship/Components/TextFields.dart';
 import 'package:gogoship/Styles/TextStyles.dart';
 import 'package:gogoship/Styles/EffectStyle.dart';
-import 'package:gogoship/Components/Buttons.dart';
+import 'package:gogoship/Components/ButtonStyle.dart';
+import '../Components/DrawerStyle.dart';
+
+
 
 class NewOrder extends StatelessWidget {
 
@@ -15,12 +17,10 @@ class NewOrder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
     final controller = Get.put(NewOrderController());
 
-
-    bool checkbox1 = true;
-    bool checkbox2 = false;
+    final GlobalKey<ScaffoldState> _scaffoldKey =
+    new GlobalKey<ScaffoldState>();
 
     return Scaffold(
         backgroundColor: ColorStyle.secondaryColor,
@@ -28,6 +28,7 @@ class NewOrder extends StatelessWidget {
         key: _scaffoldKey,
         drawer: DrawerStyle(),
         appBar: AppBarStyle(
+          iconLeading: Icons.menu,
           onTap: () {
             _scaffoldKey.currentState?.openDrawer();
           },

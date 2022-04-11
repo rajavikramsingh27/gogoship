@@ -9,8 +9,8 @@ import 'package:gogoship/Styles/TextStyles.dart';
 
 class AppBarStyle extends StatelessWidget implements PreferredSizeWidget {
   final Function()? onTap;
-
-  const AppBarStyle({Key? key, this.onTap})
+  final IconData? iconLeading;
+  const AppBarStyle({Key? key, this.onTap, this.iconLeading})
       : super(key: key);
 
   @override
@@ -29,7 +29,7 @@ class AppBarStyle extends StatelessWidget implements PreferredSizeWidget {
         ),
         leading: InkWell(
           child: Icon(
-            Icons.menu,
+            iconLeading,
             color: ColorStyle.secondaryColor,
             size: 30,
           ),

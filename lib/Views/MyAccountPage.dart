@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gogoship/Components/AppBarStyle.dart';
-import 'package:gogoship/Components/DrawerStyle.dart';
-import 'package:gogoship/Controllers/HomeScreenController.dart';
 import 'package:gogoship/Controllers/MyAccountPageController.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
-import 'package:gogoship/Styles/EffectStyle.dart';
 
 class MyAccountPage extends StatelessWidget {
   const MyAccountPage({Key? key}) : super(key: key);
@@ -13,42 +10,34 @@ class MyAccountPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(MyAccountPageController());
-    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
     return Scaffold(
-
         backgroundColor: ColorStyle.borderColorTF1,
-    key: _scaffoldKey,
-    drawer: DrawerStyle(),
-    appBar: AppBarStyle(
-    onTap: () {
-    _scaffoldKey.currentState?.openDrawer();
-    },
-    ),
+        appBar: AppBarStyle(
+          iconLeading: Icons.arrow_back,
+          onTap: () {
+            Get.back();
+          },
+        ),
         body: GetBuilder<MyAccountPageController>(
           init: MyAccountPageController(),
           initState: (state) {
             controller.reset();
-
             // print(controller.listSelected.value);
           },
           builder: (authController) {
-            return Obx(() =>   GridView.builder(
-              padding: EdgeInsets.only(
-                  top: 20,
-                left: 16, right: 16
-              ),
-              shrinkWrap: true,
+            return Obx(() => GridView.builder(
+                padding: EdgeInsets.only(top: 20, left: 16, right: 16),
+                shrinkWrap: true,
                 itemCount: controller.listIcons.length,
                 gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 16,
-                    mainAxisSpacing: 16,
-                    mainAxisExtent: 80,
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 16,
+                  mainAxisSpacing: 16,
+                  mainAxisExtent: 80,
                 ),
-                itemBuilder: (BuildContext context, int index){
-                  return   Container(
-
+                itemBuilder: (BuildContext context, int index) {
+                  return Container(
                     // child: Image.asset(controller.images[index],),
                     child: Column(
                       // crossAxisAlignment: CrossAxisAlignment.center,
@@ -60,10 +49,9 @@ class MyAccountPage extends StatelessWidget {
                           // 'Logo',
                           controller.listOrder[index],
                           style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 18,
+                            color: Colors.black,
+                            fontSize: 18,
                             fontFamily: 'GEDinarOne',
-
                           ),
                         ),
                       ],
@@ -71,20 +59,15 @@ class MyAccountPage extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: ColorStyle.bgColor,
                         borderRadius: BorderRadius.circular(10),
-
                         boxShadow: [
                           BoxShadow(
-                          color: Colors.black54,
-                          blurRadius: 2.0,
-                        ),]
-                    ),
+                            color: Colors.black54,
+                            blurRadius: 2.0,
+                          ),
+                        ]),
                   );
-                }
-
-            ));
+                }));
           },
-        )
-
-    );
+        ));
   }
 }
