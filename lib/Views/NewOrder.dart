@@ -109,7 +109,6 @@ class NewOrder extends StatelessWidget {
                                 controller.quantity.value.toString(),
                                 style: TextStyles.textSize_16.apply(
                                   color: Colors.black,
-                                  fontFamily: 'GEDinarOne',
                                   fontSizeDelta: 5
                                 ),
                               ),

@@ -50,11 +50,10 @@ class MyOrders extends StatelessWidget {
                           ),
                           Text(
                             'Order Details ',
-                            style: TextStyle(
+                            style: TextStyles.textSize_18.apply(
                               color: ColorStyle.borderColorTF,
-                              fontSize: 18,
-                              fontFamily: 'GEDinarOne',
-                            ),
+                            )
+
                           ),
                         ],
                       ),
@@ -89,11 +88,10 @@ class MyOrders extends StatelessWidget {
                         ),
                         Text(
                           'Sort By ',
-                          style: TextStyle(
+                          style: TextStyles.textSize_20.apply(
                             color: ColorStyle.primaryColor,
-                            fontSize: 20,
-                            fontFamily: 'GEDinarOne',
-                          ),
+                          )
+
                         ),
                         SizedBox(
                           width: 7,
@@ -150,7 +148,7 @@ class MyOrders extends StatelessWidget {
                                             height: 38,
                                           ),
                                           SizedBox(
-                                            width: 8,
+                                            width: 4,
                                           ),
                                           Column(
                                             crossAxisAlignment:
@@ -158,17 +156,21 @@ class MyOrders extends StatelessWidget {
                                             children: [
                                               Text(
                                                 'FS-552148 ',
-                                                style: TextStyle(
-                                                  color:
-                                                      ColorStyle.primaryColor,
-                                                  fontSize: 12,
-                                                  fontFamily: 'GEDinarOne',
-                                                ),
+                                            style: TextStyles.textSize_12.apply(
+                                              color: ColorStyle.primaryColor,
+                                            )
+                                                // style: TextStyle(
+                                                //   color:
+                                                //       ColorStyle.primaryColor,
+                                                //   fontSize: 12,
+                                                //   fontFamily: 'GEDinarOne',
+                                                // ),
                                               ),
                                               SizedBox(
                                                 height: 10,
                                               ),
                                               Row(
+                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                 children: [
                                                   Text(
                                                     '15.23S - Trendyol',
@@ -181,13 +183,10 @@ class MyOrders extends StatelessWidget {
                                                     width: 5,
                                                   ),
                                                   Text(
-                                                    '15/11/2021 - 4:20 PM',
-                                                    style: TextStyle(
-                                                      color: ColorStyle
-                                                          .primaryColor,
-                                                      fontSize: 12,
-                                                      fontFamily: 'GEDinarOne',
-                                                    ),
+                                                      '15/11/2021 - 4:20 PM',
+                                                      style: TextStyles.textSize_12.apply(
+                                                        color: ColorStyle.primaryColor,
+                                                      )
                                                   ),
                                                 ],
                                               )
@@ -195,7 +194,8 @@ class MyOrders extends StatelessWidget {
                                           ),
                                         ],
                                       ),
-                                      Container(
+                                      Expanded(
+                                          child: Container(
                                           alignment: Alignment.center,
                                           padding: EdgeInsets.only(
                                               left: 10,
@@ -206,14 +206,14 @@ class MyOrders extends StatelessWidget {
                                               controller.listOrder[index],
                                               style: TextStyle(
                                                 color: ColorStyle.primaryColor,
-                                                fontSize: 12,
-                                                fontFamily: 'GEDinarOne',
+                                                fontSize: 9,
+                                                // fontFamily: 'GEDinarOne',
                                               )),
                                           decoration: BoxDecoration(
                                               borderRadius:
-                                                  BorderRadius.circular(16),
+                                              BorderRadius.circular(16),
                                               border: Border.all(
-                                                  width: 2, color: Colors.red)))
+                                                  width: 2, color: Colors.red))))
                                     ],
                                   ),
                                   decoration: EffectStyle.shadowOrders()),
