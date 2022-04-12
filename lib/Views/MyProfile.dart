@@ -47,8 +47,7 @@ class MyProfile extends StatelessWidget {
                     Text(
                       'My Profile',
                       style: TextStyles.textSize_18.apply(
-                        color: Colors.black,
-                        fontFamily: 'GEDinarOne',
+                        color: ColorStyle.titleColor,
                       ),
                     ),
                   ],
@@ -66,8 +65,7 @@ class MyProfile extends StatelessWidget {
               Text(
                 'Name',
                 style: TextStyles.textSize_16.apply(
-                  color: Colors.white,
-                  fontFamily: 'GEDinarOne',
+                  color: ColorStyle.primaryColor,
                 ),
               ),
               SizedBox(height: 10),
@@ -76,9 +74,8 @@ class MyProfile extends StatelessWidget {
               Text(
                 'Address',
                 style: TextStyles.textSize_16.apply(
-                  color: Colors.white,
-                  fontFamily: 'GEDinarOne',
-                ),
+                  color: ColorStyle.primaryColor,
+               ),
               ),
               SizedBox(height: 10),
               TextFieldsWhiteRound(),
@@ -86,8 +83,8 @@ class MyProfile extends StatelessWidget {
               Text(
                 'Province',
                 style: TextStyles.textSize_16.apply(
-                  color: Colors.white,
-                  fontFamily: 'GEDinarOne',
+                  color: ColorStyle.primaryColor,
+
                 ),
               ),
               SizedBox(height: 10),
@@ -96,8 +93,8 @@ class MyProfile extends StatelessWidget {
               Text(
                 'Phone',
                 style: TextStyles.textSize_16.apply(
-                  color: Colors.white,
-                  fontFamily: 'GEDinarOne',
+                  color: ColorStyle.primaryColor,
+
                 ),
               ),
               SizedBox(height: 10),
@@ -106,8 +103,8 @@ class MyProfile extends StatelessWidget {
               Text(
                 'Email',
                 style: TextStyles.textSize_16.apply(
-                  color: Colors.white,
-                  fontFamily: 'GEDinarOne',
+                  color: ColorStyle.primaryColor,
+
                 ),
               ),
               SizedBox(height: 10),
@@ -116,8 +113,8 @@ class MyProfile extends StatelessWidget {
               Text(
                 'Password',
                 style: TextStyles.textSize_16.apply(
-                  color: Colors.white,
-                  // fontFamily: 'GEDinarOne',
+                  color: ColorStyle.primaryColor,
+
                 ),
               ),
               SizedBox(height: 10),
@@ -126,8 +123,7 @@ class MyProfile extends StatelessWidget {
               Text(
                 'Gender',
                 style: TextStyles.textSize_16.apply(
-                  color: Colors.white,
-                  fontFamily: 'GEDinarOne',
+                  color: ColorStyle.primaryColor,
                 ),
               ),
               SizedBox(height: 10),

@@ -11,7 +11,7 @@ void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
   ));
-
+hello
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);

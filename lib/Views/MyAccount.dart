@@ -4,6 +4,7 @@ import 'package:gogoship/Components/DrawerStyle.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
 import 'package:gogoship/Styles/EffectStyle.dart';
 import 'package:gogoship/Styles/ImageStyle.dart';
+import 'package:gogoship/Styles/TextStyles.dart';
 
 class MyAccount extends StatelessWidget {
   const MyAccount({Key? key}) : super(key: key);
@@ -51,11 +52,9 @@ class MyAccount extends StatelessWidget {
                       ),
                       Text(
                         'Shopping Basket',
-                        style: TextStyle(
-                          color: ColorStyle.borderColorTF,
-                          fontSize: 22,
-                          fontFamily: 'GEDinarOne',
-                        ),
+                        style: TextStyles.textSize_22.apply(
+                          color: ColorStyle.titleColor,
+                        )
                       ),
                       InkWell(
                         child: Container(
@@ -104,7 +103,7 @@ class MyAccount extends StatelessWidget {
                                           style: TextStyle(
                                             color: ColorStyle.borderColorTF,
                                             fontSize: 20,
-                                            fontFamily: 'GEDinarOne',
+                                            // fontFamily: 'GEDinarOne',
                                           ),
                                         ),
                                       ),
@@ -224,11 +223,14 @@ class MyAccount extends StatelessWidget {
                     alignment: Alignment.center,
                     child: Text(
                       'Total 40\$',
-                      style: TextStyle(
+                      style: TextStyles.textSize_20.apply(
                         color: ColorStyle.borderColorTF,
-                        fontSize: 20,
-                        fontFamily: 'GEDinarOne',
-                      ),
+                      )
+                      // style: TextStyle(
+                      //   color: ColorStyle.borderColorTF,
+                      //   fontSize: 20,
+                      //   fontFamily: 'GEDinarOne',
+                      // ),
                     ),
                     decoration: BoxDecoration(
                       color: ColorStyle.bgColor,
@@ -251,11 +253,10 @@ class MyAccount extends StatelessWidget {
                     width: double.infinity,
                     child: Text(
                       'Checkout',
-                      style: TextStyle(
+                      style: TextStyles.textSize_20.apply(
                         color: ColorStyle.borderColorTF,
-                        fontSize: 20,
-                        fontFamily: 'GEDinarOne',
-                      ),
+                      )
+
                     ),
                     decoration: BoxDecoration(
                       color: ColorStyle.bgColor,

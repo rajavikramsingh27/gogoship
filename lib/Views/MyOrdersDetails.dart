@@ -6,6 +6,7 @@ import 'package:gogoship/Controllers/MyOrdersDetailsController.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
 import 'package:gogoship/Styles/EffectStyle.dart';
 import 'package:gogoship/Styles/ImageStyle.dart';
+import 'package:gogoship/Styles/TextStyles.dart';
 import '../Components/TextFields.dart';
 import '../Components/DropDownCustom.dart';
 
@@ -134,11 +135,14 @@ class MyOrdersDetails extends StatelessWidget {
                           ),
                           Text(
                             'Sort By ',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 20,
-                              fontFamily: 'GEDinarOne',
-                            ),
+                            style: TextStyles.textSize_20.apply(
+                              color: ColorStyle.titleColor,
+                            )
+                            // style: TextStyle(
+                            //   color: Colors.black,
+                            //   fontSize: 20,
+                            //   // fontFamily: 'GEDinarOne',
+                            // ),
                           ),
                           SizedBox(
                             width: 7,
@@ -196,11 +200,14 @@ class MyOrdersDetails extends StatelessWidget {
                                       width: 102,
                                       child: Text(
                                         'TR-552148 ',
-                                        style: TextStyle(
+                                        style: TextStyles.textSize_18.apply(
                                           color: ColorStyle.titleColor,
-                                          fontSize: 18,
-                                          fontFamily: 'GEDinarOne',
-                                        ),
+                                        )
+                                        // style: TextStyle(
+                                        //   color: ColorStyle.titleColor,
+                                        //   fontSize: 18,
+                                        //   fontFamily: 'GEDinarOne',
+                                        // ),
                                       ),
                                       decoration: BoxDecoration(
                                           color: Colors.white,
@@ -229,12 +236,9 @@ class MyOrdersDetails extends StatelessWidget {
                                             children: [
                                               Text(
                                                 '15.23\$ - Trendyol',
-                                                style: TextStyle(
-                                                  color:
-                                                  ColorStyle.primaryColor,
-                                                  fontSize: 14,
-                                                  fontFamily: 'GEDinarOne',
-                                                ),
+                                        style: TextStyles.textSize_14.apply(
+                                          color: ColorStyle.primaryColor,
+                                        )
                                               ),
                                               Container(
                                                 padding:
@@ -247,8 +251,8 @@ class MyOrdersDetails extends StatelessWidget {
                                                         color: ColorStyle
                                                             .primaryColor,
                                                         fontSize: 14,
-                                                        fontFamily:
-                                                        'GEDinarOne',
+                                                        // fontFamily:
+                                                        // 'GEDinarOne',
                                                       ),
                                                     ),
                                                     Icon(
@@ -277,12 +281,10 @@ class MyOrdersDetails extends StatelessWidget {
                                               children: [
                                                 Text(
                                                   'Date & Time',
-                                                  style: TextStyle(
-                                                    color:
-                                                    ColorStyle.titleColor,
-                                                    fontSize: 12,
-                                                    fontFamily: 'GEDinarOne',
-                                                  ),
+                                              style: TextStyles.textSize_13.apply(
+                                                color: ColorStyle.titleColor,
+                                              )
+
                                                 ),
                                                 Container(
                                                   alignment: Alignment.center,
@@ -290,12 +292,9 @@ class MyOrdersDetails extends StatelessWidget {
                                                   width: 135,
                                                   child: Text(
                                                     '15/11/2021 - 4:20 PM',
-                                                    style: TextStyle(
-                                                      color: ColorStyle
-                                                          .primaryColor,
-                                                      fontSize: 13,
-                                                      fontFamily: 'GEDinarOne',
-                                                    ),
+                                                    style: TextStyles.textSize_13.apply(
+                                                      color: ColorStyle.primaryColor,
+                                                    )
                                                   ),
                                                   // decoration: EffectStyle.shadowOrders()
                                                   decoration: BoxDecoration(
@@ -330,13 +329,9 @@ class MyOrdersDetails extends StatelessWidget {
                                                     children: [
                                                       Text(
                                                         'Quantity',
-                                                        style: TextStyle(
-                                                          color: ColorStyle
-                                                              .titleColor,
-                                                          fontSize: 13,
-                                                          fontFamily:
-                                                          'GEDinarOne',
-                                                        ),
+                                                    style: TextStyles.textSize_13.apply(
+                                                      color: ColorStyle.titleColor,
+                                                    )
                                                       ),
                                                       Container(
                                                         alignment:
@@ -345,13 +340,10 @@ class MyOrdersDetails extends StatelessWidget {
                                                         width: 24,
                                                         child: Text(
                                                           '1',
-                                                          style: TextStyle(
-                                                            color: ColorStyle
-                                                                .primaryColor,
-                                                            fontSize: 13,
-                                                            fontFamily:
-                                                            'GEDinarOne',
-                                                          ),
+                                                          style: TextStyles.textSize_13.apply(
+                                                            color: ColorStyle.primaryColor,
+                                                          )
+
                                                         ),
                                                         // decoration: EffectStyle.shadowOrders()
                                                         decoration: BoxDecoration(
@@ -376,13 +368,10 @@ class MyOrdersDetails extends StatelessWidget {
                                                     children: [
                                                       Text(
                                                         'Color',
-                                                        style: TextStyle(
-                                                          color: ColorStyle
-                                                              .titleColor,
-                                                          fontSize: 13,
-                                                          fontFamily:
-                                                          'GEDinarOne',
-                                                        ),
+                                                    style: TextStyles.textSize_13.apply(
+                                                      color: ColorStyle.titleColor,
+                                                    )
+
                                                       ),
                                                       SizedBox(
                                                         width: 2,
@@ -394,13 +383,9 @@ class MyOrdersDetails extends StatelessWidget {
                                                         width: 40,
                                                         child: Text(
                                                           'Black',
-                                                          style: TextStyle(
-                                                            color: ColorStyle
-                                                                .primaryColor,
-                                                            fontSize: 13,
-                                                            fontFamily:
-                                                            'GEDinarOne',
-                                                          ),
+                                                          style: TextStyles.textSize_13.apply(
+                                                            color: ColorStyle.primaryColor,
+                                                          )
                                                         ),
                                                         // decoration: EffectStyle.shadowOrders()
                                                         decoration: BoxDecoration(
@@ -425,13 +410,10 @@ class MyOrdersDetails extends StatelessWidget {
                                                     children: [
                                                       Text(
                                                         'Size',
-                                                        style: TextStyle(
-                                                          color: ColorStyle
-                                                              .titleColor,
-                                                          fontSize: 13,
-                                                          fontFamily:
-                                                          'GEDinarOne',
-                                                        ),
+                                                    style: TextStyles.textSize_13.apply(
+                                                      color: ColorStyle.titleColor,
+                                                    )
+
                                                       ),
                                                       SizedBox(
                                                         width: 2,
@@ -443,13 +425,9 @@ class MyOrdersDetails extends StatelessWidget {
                                                         width: 25,
                                                         child: Text(
                                                           'L',
-                                                          style: TextStyle(
-                                                            color: ColorStyle
-                                                                .primaryColor,
-                                                            fontSize: 13,
-                                                            fontFamily:
-                                                            'GEDinarOne',
-                                                          ),
+                                                          style: TextStyles.textSize_13.apply(
+                                                            color: ColorStyle.primaryColor,
+                                                          )
                                                         ),
                                                         // decoration: EffectStyle.shadowOrders()
                                                         decoration: BoxDecoration(
@@ -498,6 +476,9 @@ class MyOrdersDetails extends StatelessWidget {
                                     SizedBox(
                                       width: 18,
                                     ),
+
+
+
                                     Container(
                                       height: 85,
                                       width: 278,
@@ -521,13 +502,10 @@ class MyOrdersDetails extends StatelessWidget {
                                                   children: [
                                                     Text(
                                                       'Item Price',
-                                                      style: TextStyle(
-                                                        color: ColorStyle
-                                                            .titleColor,
-                                                        fontSize: 13,
-                                                        fontFamily:
-                                                        'GEDinarOne',
-                                                      ),
+                                                  style: TextStyles.textSize_13.apply(
+                                                    color: ColorStyle.titleColor,
+                                                  )
+
                                                     ),
                                                     Container(
                                                       alignment:
@@ -536,13 +514,10 @@ class MyOrdersDetails extends StatelessWidget {
                                                       width: 59,
                                                       child: Text(
                                                         '25.30\$',
-                                                        style: TextStyle(
-                                                          color: ColorStyle
-                                                              .primaryColor,
-                                                          fontSize: 13,
-                                                          fontFamily:
-                                                          'GEDinarOne',
-                                                        ),
+                                                        style: TextStyles.textSize_13.apply(
+                                                          color: ColorStyle.primaryColor,
+                                                        )
+
                                                       ),
                                                       // decoration: EffectStyle.shadowOrders()
                                                       decoration: BoxDecoration(
@@ -575,13 +550,9 @@ class MyOrdersDetails extends StatelessWidget {
                                                   children: [
                                                     Text(
                                                       'Fees',
-                                                      style: TextStyle(
-                                                        color: ColorStyle
-                                                            .titleColor,
-                                                        fontSize: 13,
-                                                        fontFamily:
-                                                        'GEDinarOne',
-                                                      ),
+                                                  style: TextStyles.textSize_13.apply(
+                                                    color: ColorStyle.titleColor,
+                                                  )
                                                     ),
                                                     Container(
                                                       alignment:
@@ -590,13 +561,10 @@ class MyOrdersDetails extends StatelessWidget {
                                                       width: 59,
                                                       child: Text(
                                                         '3.00\$',
-                                                        style: TextStyle(
-                                                          color: ColorStyle
-                                                              .primaryColor,
-                                                          fontSize: 13,
-                                                          fontFamily:
-                                                          'GEDinarOne',
-                                                        ),
+                                                        style: TextStyles.textSize_13.apply(
+                                                          color: ColorStyle.primaryColor,
+                                                        )
+
                                                       ),
                                                       // decoration: EffectStyle.shadowOrders()
                                                       decoration: BoxDecoration(
@@ -638,13 +606,9 @@ class MyOrdersDetails extends StatelessWidget {
                                                   children: [
                                                     Text(
                                                       'Total',
-                                                      style: TextStyle(
-                                                        color: ColorStyle
-                                                            .titleColor,
-                                                        fontSize: 13,
-                                                        fontFamily:
-                                                        'GEDinarOne',
-                                                      ),
+                                                  style: TextStyles.textSize_13.apply(
+                                                    color: ColorStyle.titleColor,
+                                                  )
                                                     ),
                                                     Container(
                                                       alignment:
@@ -653,13 +617,10 @@ class MyOrdersDetails extends StatelessWidget {
                                                       width: 59,
                                                       child: Text(
                                                         '28.00\$',
-                                                        style: TextStyle(
-                                                          color: ColorStyle
-                                                              .primaryColor,
-                                                          fontSize: 13,
-                                                          fontFamily:
-                                                          'GEDinarOne',
-                                                        ),
+                                                        style: TextStyles.textSize_13.apply(
+                                                          color: ColorStyle.primaryColor,
+                                                        )
+
                                                       ),
                                                       // decoration: EffectStyle.shadowOrders()
                                                       decoration: BoxDecoration(
@@ -692,13 +653,10 @@ class MyOrdersDetails extends StatelessWidget {
                                                   children: [
                                                     Text(
                                                       'Coupon Code',
-                                                      style: TextStyle(
-                                                        color: ColorStyle
-                                                            .titleColor,
-                                                        fontSize: 13,
-                                                        fontFamily:
-                                                        'GEDinarOne',
-                                                      ),
+                                                  style: TextStyles.textSize_13.apply(
+                                                    color: ColorStyle.titleColor,
+                                                  )
+
                                                     ),
                                                     Container(
                                                       alignment:
@@ -707,13 +665,9 @@ class MyOrdersDetails extends StatelessWidget {
                                                       width: 35,
                                                       child: Text(
                                                         'No',
-                                                        style: TextStyle(
-                                                          color: ColorStyle
-                                                              .primaryColor,
-                                                          fontSize: 13,
-                                                          fontFamily:
-                                                          'GEDinarOne',
-                                                        ),
+                                                        style: TextStyles.textSize_13.apply(
+                                                          color: ColorStyle.primaryColor,
+                                                        )
                                                       ),
                                                       // decoration: EffectStyle.shadowOrders()
                                                       decoration: BoxDecoration(
@@ -749,19 +703,15 @@ class MyOrdersDetails extends StatelessWidget {
                                     children: [
                                       Text(
                                         'Status:',
-                                        style: TextStyle(
-                                          color: ColorStyle.titleColor,
-                                          fontSize: 13,
-                                          fontFamily: 'GEDinarOne',
-                                        ),
+                                    style: TextStyles.textSize_13.apply(
+                                      color: ColorStyle.titleColor,
+                                    )
                                       ),
                                       Text(
                                         'Cancelled',
-                                        style: TextStyle(
+                                        style: TextStyles.textSize_13.apply(
                                           color: ColorStyle.redColor,
-                                          fontSize: 13,
-                                          fontFamily: 'GEDinarOne',
-                                        ),
+                                        )
                                       ),
                                     ],
                                   ),

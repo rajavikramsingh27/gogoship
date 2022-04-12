@@ -215,7 +215,6 @@ logOut() {
                     'Are You Sure ? ',
                     style: TextStyles.textSize_22.apply(
                       color: ColorStyle.primaryColor,
-                      fontFamily: 'GEDinarOne',
                       // fontWeightDelta: 2
                     )
                   ),

@@ -48,11 +48,10 @@ class HomeScreen extends StatelessWidget {
                         alignment: Alignment.center,
                         child: Text(
                           'Quick Search',
-                          style: TextStyle(
-                            color: ColorStyle.bgColor,
-                            fontSize: 22,
-                            fontFamily: 'GEDinarOne',
+                          style: TextStyles.textSize_22.apply(
+                              color: ColorStyle.bgColor
                           ),
+
                         ),
                       ),
                       SizedBox(

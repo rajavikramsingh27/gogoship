@@ -81,7 +81,7 @@ class LogIn extends StatelessWidget {
                                 ),
                                 child: Text('Recover Password?',
                                   style: TextStyles.textSize_15.apply(fontWeightDelta: 1,
-                                    fontFamily: 'GEDinarOne',
+                                    // fontFamily: 'GEDinarOne',
                                   ),
                                 ),
                                 onPressed: () {

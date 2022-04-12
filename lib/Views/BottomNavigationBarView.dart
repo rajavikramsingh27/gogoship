@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gogoship/Styles/ColorStyle.dart';
+import 'package:gogoship/Styles/TextStyles.dart';
 
 class BottomNavigationBarView extends StatelessWidget {
   final Function()? onTap1;
@@ -40,9 +41,8 @@ class BottomNavigationBarView extends StatelessWidget {
                         Icon(Icons.home),
                         Text(
                           'Home',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 14,
+                          style: TextStyles.textSize_14.apply(
+                            color: ColorStyle.titleColor
                           ),
                         ),
                       ],
@@ -55,7 +55,9 @@ class BottomNavigationBarView extends StatelessWidget {
                       Icon(Icons.account_balance_wallet_rounded),
                       Text(
                         'My Wallet',
-                        style: TextStyle(color: Colors.black, fontSize: 14),
+                        style: TextStyles.textSize_14.apply(
+                            color: ColorStyle.titleColor
+                        ),
                       ),
                     ],
                   ),
@@ -92,7 +94,9 @@ class BottomNavigationBarView extends StatelessWidget {
                 ),
                 Text(
                   'New Order',
-                  style: TextStyle(color: Colors.black, fontSize: 14),
+                  style: TextStyles.textSize_14.apply(
+                      color: ColorStyle.titleColor
+                  ),
                 ),
               ],
             ),
