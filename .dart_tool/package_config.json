@@ -188,6 +188,24 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "sign_in_with_apple",
+      "rootUri": "file:///Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/sign_in_with_apple-3.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "sign_in_with_apple_platform_interface",
+      "rootUri": "file:///Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/sign_in_with_apple_platform_interface-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "sign_in_with_apple_web",
+      "rootUri": "file:///Users/granzax/flutter/.pub-cache/hosted/pub.dartlang.org/sign_in_with_apple_web-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///Users/granzax/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -284,7 +302,7 @@
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-04-11T18:42:02.949146Z",
+  "generated": "2022-04-12T03:32:18.237234Z",
   "generator": "pub",
   "generatorVersion": "2.17.0-182.1.beta"
 }
